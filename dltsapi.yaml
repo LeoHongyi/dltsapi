@@ -1,0 +1,403 @@
+openapi: 3.0.0
+
+info:
+  title: DLTS Web Portal API
+  version: 1.0.0
+
+servers:
+  - url: http://dltshub.redmond.corp.microsoft.com/api/dlws
+  
+components:
+  parameters:
+    cluster:
+      in: query
+      name: cluster
+      required: true
+      description: The specific cluster of the request
+      schema:
+        type: string
+    email:
+      in: query
+      name: Email
+      description: The email of the account, used in password authentication.
+      schema:
+        type: string
+    key:
+      in: query
+      name: Key
+      description: The password (key) of the account, used in password authentication.
+      schema:
+        type: string
+    team:
+      in: query
+      name: Team
+      description: The team of the request, used in password authentication.
+      schema:
+        type: string
+  examples:
+    noSession:
+      summary: No session
+      value: Session timeout, please log in again.
+    invalidCluster:
+      summary: Cluster is empty or not found
+      value: Invaid cluster
+    unauthenticated:
+      summary: AAD token is expired
+      value: Unauthorized User, Please login!
+    
+
+paths:
+  '/GetMountPoints':
+    get:
+      summary: Get mount points.
+      parameters:
+        - $ref: '#/components/parameters/cluster'
+      tags:
+        - Configuration
+      responses:
+        200:
+          description: OK
+          content:
+            application/json:
+              examples:
+                default:
+                  value:
+                    mountdescription: "{'hdfs': 'Hadoop file system (replicated distribute storage).',
+                      'azurefileshare': 'Azure file storage', 'localHDD': 'Local HDD. ', 'glusterfs':
+                      'GlusterFS (replicated distributed storage)', 'nfs': 'NFS (remote file share)',
+                      'emptyDir': 'Kubernetes emptyDir (folder will be erased after job termination).',
+                      'local': 'Local SSD. '}"
+                    mountpoints: "{'rootshare': {'curphysicalmountpoint': '/mntdlws/nfs', 'mountpoints':
+                      '', 'server': '192.168.255.1', 'type': 'nfs', 'filesharename': '/data/share'}}"
+                    username: qixcheng
+                    mounthomefolder: true
+                    deploymounts: "[]"
+                    workPath: file://dltsprodstorage.redmond.corp.microsoft.com/qixcheng/
+                    dataPath: file://dltsprodstorage.redmond.corp.microsoft.com/data/
+                noCluster:
+                  summary: Cluster is empty or not found
+                  value:
+                    mountdescription: "{}"
+                    mountpoints: "{}"
+                    username: qixcheng
+                    mounthomefolder: false
+                    deploymounts: "[]"
+        400:
+          description: Bad Request
+          content:
+            text/plain:
+              examples:
+                noSession:
+                  $ref: '#/components/examples/noSession'
+          
+  '/grafana':
+    get:
+      summary: Get Grafana URL.
+      parameters:
+        - $ref: '#/components/parameters/cluster'
+      tags:
+        - Configuration
+      responses:
+        200:
+          description: OK
+          content:
+            text/plain:
+              example: 'http://dltsprod-infra01.eastus.cloudapp.azure.com:3000'
+        400:
+          description: Bad Request
+          content:
+            text/plain:
+              examples:
+                noSession:
+                  $ref: '#/components/examples/noSession'
+                invalidCluster:
+                  $ref: '#/components/examples/invalidCluster'
+          
+  '/GetLog/{jobId}':
+    get:
+      tags:
+        - Upstream Proxy
+      parameters:
+        - name: jobId
+          in: path
+          required: true
+          schema:
+            type: string
+      summary: This API is down
+      description: Currently we are using /JobDetail to retrieve job logs.
+      deprecated: true
+      responses:
+        500:
+          description: Down
+          
+  '/GetVCs':
+    get:
+      summary: Proxy /ListVCs of the upstream.
+      tags:
+        - Upstream Proxy
+      parameters:
+        - $ref: '#/components/parameters/cluster'
+        - $ref: '#/components/parameters/email'
+        - $ref: '#/components/parameters/key'
+        - $ref: '#/components/parameters/team'
+      responses:
+        200:
+          description: OK
+        400:
+          description: Bad Request
+          content:
+            text/plain:
+              examples:
+                noSession:
+                  $ref: '#/components/examples/noSession'
+                unauthenticted:
+                  $ref: '#/components/examples/unauthenticated'
+                invalidCluster:
+                  $ref: '#/components/examples/invalidCluster'
+          
+  '/GetStorages':
+    get:
+      summary: Proxy /ListStorages of the upstream.
+      tags:
+        - Upstream Proxy
+      parameters:
+        - $ref: '#/components/parameters/cluster'
+        - $ref: '#/components/parameters/email'
+        - $ref: '#/components/parameters/key'
+        - $ref: '#/components/parameters/team'
+      responses:
+        200:
+          description: OK
+        400:
+          description: Bad Request
+          content:
+            text/plain:
+              examples:
+                noSession:
+                  $ref: '#/components/examples/noSession'
+                unauthenticted:
+                  $ref: '#/components/examples/unauthenticated'
+                invalidCluster:
+                  $ref: '#/components/examples/invalidCluster'
+          
+  '/ListJobs':
+    get:
+      summary: Proxy /ListJobs of the upstream, with the current user as owner.
+      tags:
+        - Upstream Proxy
+      parameters:
+        - $ref: '#/components/parameters/cluster'
+        - $ref: '#/components/parameters/email'
+        - $ref: '#/components/parameters/key'
+        - $ref: '#/components/parameters/team'
+        - in: query
+          name: num
+          description: num query of the upstream.
+          schema:
+            type: number
+      responses:
+        200:
+          description: OK
+        400:
+          description: Bad Request
+          content:
+            text/plain:
+              examples:
+                noSession:
+                  $ref: '#/components/examples/noSession'
+                unauthenticted:
+                  $ref: '#/components/examples/unauthenticated'
+                invalidCluster:
+                  $ref: '#/components/examples/invalidCluster'
+          
+  '/ListAllJobs':
+    get:
+      summary: Proxy /ListJobs of the upstream, with "all" as owner.
+      tags:
+        - Upstream Proxy
+      parameters:
+        - $ref: '#/components/parameters/cluster'
+        - $ref: '#/components/parameters/email'
+        - $ref: '#/components/parameters/key'
+        - $ref: '#/components/parameters/team'
+        - in: query
+          name: num
+          description: num query of the upstream.
+          schema:
+            type: number
+      responses:
+        200:
+          description: OK
+        400:
+          description: Bad Request
+          content:
+            text/plain:
+              examples:
+                noSession:
+                  $ref: '#/components/examples/noSession'
+                unauthenticted:
+                  $ref: '#/components/examples/unauthenticated'
+                invalidCluster:
+                  $ref: '#/components/examples/invalidCluster'
+                accessDenied:
+                  summary: Access denied
+                  value: 'invalid API call!'
+          
+  '/KillJob':
+    get:
+      summary: Proxy /KillJob of the upstream.
+      tags:
+        - Upstream Proxy
+      parameters:
+        - $ref: '#/components/parameters/cluster'
+        - $ref: '#/components/parameters/email'
+        - $ref: '#/components/parameters/key'
+        - $ref: '#/components/parameters/team'
+        - in: query
+          name: jobId
+          description: Job id
+          schema:
+            type: string
+      responses:
+        200:
+          description: OK
+        400:
+          description: Bad Request
+          content:
+            text/plain:
+              examples:
+                noSession:
+                  $ref: '#/components/examples/noSession'
+                unauthenticted:
+                  $ref: '#/components/examples/unauthenticated'
+                invalidCluster:
+                  $ref: '#/components/examples/invalidCluster'
+                noJobId:
+                  summary: No job id
+                  value: 'invalid API call!'
+          
+  '/ApproveJob':
+    get:
+      summary: Proxy /ApproveJob of the upstream.
+      tags:
+        - Upstream Proxy
+      parameters:
+        - $ref: '#/components/parameters/cluster'
+        - $ref: '#/components/parameters/email'
+        - $ref: '#/components/parameters/key'
+        - $ref: '#/components/parameters/team'
+        - in: query
+          name: jobId
+          description: Job id
+          schema:
+            type: string
+      responses:
+        200:
+          description: OK
+        400:
+          description: Bad Request
+          content:
+            text/plain:
+              examples:
+                noSession:
+                  $ref: '#/components/examples/noSession'
+                unauthenticted:
+                  $ref: '#/components/examples/unauthenticated'
+                invalidCluster:
+                  $ref: '#/components/examples/invalidCluster'
+                noJobId:
+                  summary: No job id
+                  value: 'invalid API call!'
+                accessDenied:
+                  summary: Access denied
+                  value: 'invalid API call!'
+          
+  '/JobDetail':
+    get:
+      summary: Proxy /GetJobDetail of the upstream.
+      tags:
+        - Upstream Proxy
+      parameters:
+        - $ref: '#/components/parameters/cluster'
+        - $ref: '#/components/parameters/email'
+        - $ref: '#/components/parameters/key'
+        - $ref: '#/components/parameters/team'
+        - in: query
+          name: jobId
+          description: Job id
+          schema:
+            type: string
+      responses:
+        200:
+          description: OK
+        400:
+          description: Bad Request
+          content:
+            text/plain:
+              examples:
+                noSession:
+                  $ref: '#/components/examples/noSession'
+                unauthenticted:
+                  $ref: '#/components/examples/unauthenticated'
+                invalidCluster:
+                  $ref: '#/components/examples/invalidCluster'
+                noJobId:
+                  summary: No job id
+                  value: 'invalid API call!'
+          
+  '/JobStatus':
+    get:
+      summary: Proxy /GetJobStatus of the upstream.
+      tags:
+        - Upstream Proxy
+      parameters:
+        - $ref: '#/components/parameters/cluster'
+        - $ref: '#/components/parameters/email'
+        - $ref: '#/components/parameters/key'
+        - $ref: '#/components/parameters/team'
+        - in: query
+          name: jobId
+          description: Job id
+          schema:
+            type: string
+      responses:
+        200:
+          description: OK
+        400:
+          description: Bad Request
+          content:
+            text/plain:
+              examples:
+                noSession:
+                  $ref: '#/components/examples/noSession'
+                unauthenticted:
+                  $ref: '#/components/examples/unauthenticated'
+                invalidCluster:
+                  $ref: '#/components/examples/invalidCluster'
+                noJobId:
+                  summary: No job id
+                  value: 'invalid API call!'
+          
+  '/submit':
+    post:
+      tags:
+        - Template Management
+      responses:
+        200:
+          description: ''
+  
+  '/postJob':
+    post:
+      tags:
+        - Job Submission
+      responses:
+        200:
+          description: ''
+  
+  '/endpoints':
+    post:
+      tags:
+        - Job Management
+      responses:
+        200:
+          description: ''
