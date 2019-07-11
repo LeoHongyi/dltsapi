@@ -4216,6 +4216,247 @@ paths:
                   summary: No job id
                   value: 'invalid API call!'
 
+  '/SubmitJob':
+    get:
+      summary: This API is down
+      description: Currently we are using /postJob to do job submission.
+      deprecated: true
+      tags:
+        - Job Submission
+      parameters:
+        - $ref: '#/components/parameters/cluster'
+        - $ref: '#/components/parameters/email'
+        - $ref: '#/components/parameters/key'
+        - $ref: '#/components/parameters/team'
+      responses:
+        200:
+          description: OK
+
+  '/GetClusterStatus':
+    get:
+      summary: Proxy /GetClusterStatus of the upstream.
+      tags:
+        - Upstream Proxy
+      parameters:
+        - $ref: '#/components/parameters/cluster'
+        - $ref: '#/components/parameters/email'
+        - $ref: '#/components/parameters/key'
+        - $ref: '#/components/parameters/team'
+      responses:
+        200:
+          description: OK
+          
+  '/DeleteTemplate':
+    get:
+      tags:
+        - Template Management
+      parameters:
+        - $ref: '#/components/parameters/cluster'
+        - $ref: '#/components/parameters/email'
+        - $ref: '#/components/parameters/key'
+        - $ref: '#/components/parameters/team'
+        - in: query
+          name: name
+          schema:
+            type: string
+        - in: query
+          name: location
+          schema:
+            type: string
+      responses:
+        200:
+          description: OK
+          content:
+            text/plain:
+              examples:
+                default:
+                  value: '{ "message": "Job Successfully Deleted!"}'
+                noDatabase:
+                  value: '{ "message": "Error: Could not delete template from given database"}'
+                error:
+                  value: '{ "message": "Error: Could not find job to be deleted"}'
+                noPermission:
+                  value: '{ "message": "Error: Could not delete job"}'
+          
+  '/GetTemplates':
+    get:
+      tags:
+        - Template Management
+      parameters:
+        - $ref: '#/components/parameters/cluster'
+        - $ref: '#/components/parameters/email'
+        - $ref: '#/components/parameters/key'
+        - $ref: '#/components/parameters/team'
+        - in: query
+          name: type
+          schema:
+            type: string
+      responses:
+        200:
+          description: OK
+          
+  '/GetDatabase':
+    get:
+      tags:
+        - Template Management
+      parameters:
+        - $ref: '#/components/parameters/cluster'
+        - $ref: '#/components/parameters/email'
+        - $ref: '#/components/parameters/key'
+        - $ref: '#/components/parameters/team'
+        - in: query
+          name: location
+          schema:
+            type: string
+      responses:
+        200:
+          description: OK
+          content:
+            text/plain:
+              examples:
+                noContent:
+                  value: '[]'
+          
+  '/RunCommand':
+    get:
+      summary: Proxy /AddCommand of the upstream.
+      tags:
+        - Upstream Proxy
+      parameters:
+        - $ref: '#/components/parameters/cluster'
+        - $ref: '#/components/parameters/email'
+        - $ref: '#/components/parameters/key'
+        - $ref: '#/components/parameters/team'
+        - in: query
+          name: jobId
+          description: Job id
+          schema:
+            type: string
+        - in: query
+          name: command
+          description: Command
+          schema:
+            type: string
+      responses:
+        200:
+          description: OK
+        400:
+          description: Bad Request
+          content:
+            text/plain:
+              examples:
+                noSession:
+                  $ref: '#/components/examples/noSession'
+                unauthenticted:
+                  $ref: '#/components/examples/unauthenticated'
+                invalidCluster:
+                  $ref: '#/components/examples/invalidCluster'
+                noJobId:
+                  summary: No job id
+                  value: 'invalid API call!'
+                noCommand:
+                  summary: No command
+                  value: 'invalid API call!'
+          
+  '/GetCommands':
+    get:
+      summary: Proxy /GetCommands of the upstream.
+      tags:
+        - Upstream Proxy
+      parameters:
+        - $ref: '#/components/parameters/cluster'
+        - $ref: '#/components/parameters/email'
+        - $ref: '#/components/parameters/key'
+        - $ref: '#/components/parameters/team'
+        - in: query
+          name: jobId
+          description: Job id
+          schema:
+            type: string
+      responses:
+        200:
+          description: OK
+        400:
+          description: Bad Request
+          content:
+            text/plain:
+              examples:
+                noSession:
+                  $ref: '#/components/examples/noSession'
+                unauthenticted:
+                  $ref: '#/components/examples/unauthenticated'
+                invalidCluster:
+                  $ref: '#/components/examples/invalidCluster'
+                noJobId:
+                  summary: No job id
+                  value: 'invalid API call!'
+  
+  '/GetEndpoints':
+    get:
+      summary: Proxy /endpoints of the upstream.
+      tags:
+        - Upstream Proxy
+      parameters:
+        - $ref: '#/components/parameters/cluster'
+        - $ref: '#/components/parameters/email'
+        - $ref: '#/components/parameters/key'
+        - $ref: '#/components/parameters/team'
+        - in: query
+          name: jobId
+          description: Job id
+          schema:
+            type: string
+      responses:
+        200:
+          description: OK
+        400:
+          description: Bad Request
+          content:
+            text/plain:
+              examples:
+                noSession:
+                  $ref: '#/components/examples/noSession'
+                unauthenticted:
+                  $ref: '#/components/examples/unauthenticated'
+                invalidCluster:
+                  $ref: '#/components/examples/invalidCluster'
+                noJobId:
+                  summary: No job id
+                  value: 'invalid API call!'
+  
+  '/GetVC':
+    get:
+      summary: Proxy /GetVC of the upstream.
+      tags:
+        - Upstream Proxy
+      parameters:
+        - $ref: '#/components/parameters/cluster'
+        - $ref: '#/components/parameters/email'
+        - $ref: '#/components/parameters/key'
+        - $ref: '#/components/parameters/team'
+        - in: query
+          name: vcName
+          description: VC name
+          schema:
+            type: string
+      responses:
+        200:
+          description: OK
+        400:
+          description: Bad Request
+          content:
+            text/plain:
+              examples:
+                noSession:
+                  $ref: '#/components/examples/noSession'
+                unauthenticted:
+                  $ref: '#/components/examples/unauthenticated'
+                invalidCluster:
+                  $ref: '#/components/examples/invalidCluster'
+                noJobId:
+                  summary: No VC name
+                  value: 'invalid API call!'
+
   '/submit':
     post:
       tags:
