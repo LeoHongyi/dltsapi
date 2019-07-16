@@ -4245,7 +4245,1301 @@ paths:
       responses:
         200:
           description: OK
-          
+          content:
+            application/json:
+              examples:
+                default:
+                  value:
+                    AvaliableJobNum: 17,
+                    gpu_avaliable: {
+                                    "P40": 6
+                                   }
+                    gpu_capacity: {
+                                    "P40": 43
+                                  }
+                    gpu_reserved: {
+                                    "P40": 0
+                                  }
+                    gpu_unschedulable: {
+                                    "P40": 0
+                                   }
+                    gpu_used: {
+                                    "": 0,
+                                    "P40": 37
+                              }
+                    last_updated_time: "Thu, 11 Jul 2019 17:19:33 GMT"
+                    node_status: [
+                        {
+                          "InternalIP": "192.168.0.8",
+                          "gpuType": "P40",
+                          "gpu_allocatable": {
+                            "P40": 4
+                          },
+                          "gpu_capacity": {
+                            "P40": 4
+                          },
+                          "gpu_used": {
+                            "P40": 3
+                          },
+                          "labels": {
+                            "FragmentGPUJob": "active",
+                            "all": "active",
+                            "beta.kubernetes.io/arch": "amd64",
+                            "beta.kubernetes.io/os": "linux",
+                            "cloud-collectd-node-agent": "active",
+                            "cloud-fluentd-es-config-v0.1.0": "active",
+                            "cloud-fluentd-es-v2.0.2": "active",
+                            "collectd-node-agent": "active",
+                            "datanode": "active",
+                            "default": "active",
+                            "detectron": "active",
+                            "dlws-grafana": "active",
+                            "elasticsearch-logging": "active",
+                            "fluentd-es-config-v0.1.0": "active",
+                            "fluentd-es-v2.0.2": "active",
+                            "freeflowrouter": "active",
+                            "glusterfs": "active",
+                            "google-cadvisor": "active",
+                            "gpuType": "P40",
+                            "hdfs": "active",
+                            "hdfsdatanode": "active",
+                            "hdfsformat": "active",
+                            "hdfsjournal": "active",
+                            "hdfsnn1": "active",
+                            "hdfsnn2": "active",
+                            "hdfsstandby": "active",
+                            "kubernetes.io/hostname": "dltsprod-worker-myfati",
+                            "nginx": "active",
+                            "nvidia-device-plugin-daemonset": "active",
+                            "nvidiaheartbeat": "active",
+                            "recogserver": "active",
+                            "sparknode": "active",
+                            "worker": "active",
+                            "yarnnodemanager": "active",
+                            "yarnrm1": "active",
+                            "yarnrm2": "active",
+                            "zk": "active",
+                            "zk-config": "active",
+                            "zk-headless": "active"
+                          },
+                          "name": "dltsprod-worker-myfati",
+                          "pods": [
+                            "692edae5-845e-4e18-bcdb-da48f6b2f2c8 : euka (gpu usage:0%)!!!!!! (gpu #:1)",
+                            "a09cc90b-3ca6-4bd0-8f01-a2fbb1e3fa01 : v-liuhon (gpu usage:0%)!!!!!! (gpu #:1)",
+                            "a846abc1-44fc-4993-9977-dbc443096271 : lexion (gpu usage:0%)!!!!!! (gpu #:1)"
+                          ],
+                          "scheduled_service": [
+                            "nvidiaheartbeat",
+                            "cloud-fluentd-es-v2.0.2",
+                            "zk",
+                            "hdfsjournal",
+                            "glusterfs",
+                            "hdfsstandby",
+                            "yarnnodemanager",
+                            "fluentd-es-v2.0.2",
+                            "hdfs",
+                            "nvidia-device-plugin-daemonset",
+                            "cloud-fluentd-es-config-v0.1.0",
+                            "hdfsnn1",
+                            "hdfsnn2",
+                            "datanode",
+                            "recogserver",
+                            "elasticsearch-logging",
+                            "fluentd-es-config-v0.1.0",
+                            "sparknode",
+                            "collectd-node-agent",
+                            "hdfsformat",
+                            "zk-headless",
+                            "zk-config",
+                            "worker",
+                            "dlws-grafana",
+                            "detectron",
+                            "nginx",
+                            "FragmentGPUJob",
+                            "freeflowrouter",
+                            "yarnrm1",
+                            "yarnrm2",
+                            "hdfsdatanode",
+                            "google-cadvisor",
+                            "P40",
+                            "cloud-collectd-node-agent"
+                          ],
+                          "unschedulable": false
+                        },
+                        {
+                          "InternalIP": "192.168.255.1",
+                          "gpuType": "",
+                          "gpu_allocatable": {
+                            
+                          },
+                          "gpu_capacity": {
+                            
+                          },
+                          "gpu_used": {
+                            "": 0
+                          },
+                          "labels": {
+                            "FragmentGPUJob": "active",
+                            "all": "active",
+                            "beta.kubernetes.io/arch": "amd64",
+                            "beta.kubernetes.io/os": "linux",
+                            "cloud-collectd-node-agent": "active",
+                            "cloud-fluentd-es-config-v0.1.0": "active",
+                            "cloud-fluentd-es-v2.0.2": "active",
+                            "collectd-node-agent": "active",
+                            "datanode": "active",
+                            "default": "active",
+                            "detectron": "active",
+                            "dlws-grafana": "active",
+                            "elasticsearch": "active",
+                            "elasticsearch-logging": "active",
+                            "fluentd-es-config-v0.1.0": "active",
+                            "fluentd-es-v2.0.2": "active",
+                            "freeflowrouter": "active",
+                            "google-cadvisor": "active",
+                            "grafana": "active",
+                            "hdfsdatanode": "active",
+                            "hdfsformat": "active",
+                            "hdfsjournal": "active",
+                            "hdfsnn1": "active",
+                            "hdfsnn2": "active",
+                            "hdfsstandby": "active",
+                            "influxdb": "active",
+                            "infrastructure": "active",
+                            "jobmanager": "active",
+                            "journalnode": "active",
+                            "kibana": "active",
+                            "kubernetes.io/hostname": "dltsprod-infra01",
+                            "mysql": "active",
+                            "namenode1": "active",
+                            "nginx": "active",
+                            "nvidia-device-plugin-daemonset": "active",
+                            "nvidiaheartbeat": "active",
+                            "phpmyadmin": "active",
+                            "prometheus": "active",
+                            "recogserver": "active",
+                            "restfulapi": "active",
+                            "sparknode": "active",
+                            "watchdog": "active",
+                            "webportal": "active",
+                            "yarnnodemanager": "active",
+                            "yarnrm1": "active",
+                            "yarnrm2": "active",
+                            "zk": "active",
+                            "zk-config": "active",
+                            "zk-headless": "active",
+                            "zookeeper": "active"
+                          },
+                          "name": "dltsprod-infra01",
+                          "pods": [
+                            "jobmanager-nwtpw (gpu #:0)",
+                            "restfulapi-hg5xk (gpu #:0)",
+                            "webportal-tjqjr (gpu #:0)"
+                          ],
+                          "scheduled_service": [
+                            "phpmyadmin",
+                            "nvidiaheartbeat",
+                            "cloud-fluentd-es-v2.0.2",
+                            "zk",
+                            "hdfsjournal",
+                            "fluentd-es-v2.0.2",
+                            "kibana",
+                            "hdfsstandby",
+                            "yarnnodemanager",
+                            "mysql",
+                            "watchdog",
+                            "webportal",
+                            "nvidia-device-plugin-daemonset",
+                            "cloud-fluentd-es-config-v0.1.0",
+                            "grafana",
+                            "hdfsnn1",
+                            "hdfsnn2",
+                            "datanode",
+                            "recogserver",
+                            "elasticsearch",
+                            "fluentd-es-config-v0.1.0",
+                            "sparknode",
+                            "collectd-node-agent",
+                            "hdfsformat",
+                            "infrastructure",
+                            "journalnode",
+                            "zk-headless",
+                            "zk-config",
+                            "namenode1",
+                            "dlws-grafana",
+                            "influxdb",
+                            "detectron",
+                            "nginx",
+                            "prometheus",
+                            "restfulapi",
+                            "FragmentGPUJob",
+                            "freeflowrouter",
+                            "zookeeper",
+                            "jobmanager",
+                            "yarnrm1",
+                            "yarnrm2",
+                            "hdfsdatanode",
+                            "elasticsearch-logging",
+                            "google-cadvisor",
+                            "cloud-collectd-node-agent"
+                          ],
+                          "unschedulable": false
+                        },
+                        {
+                          "InternalIP": "192.168.0.11",
+                          "gpuType": "P40",
+                          "gpu_allocatable": {
+                            "P40": 4
+                          },
+                          "gpu_capacity": {
+                            "P40": 4
+                          },
+                          "gpu_used": {
+                            "P40": 3
+                          },
+                          "labels": {
+                            "FragmentGPUJob": "active",
+                            "all": "active",
+                            "beta.kubernetes.io/arch": "amd64",
+                            "beta.kubernetes.io/os": "linux",
+                            "cloud-collectd-node-agent": "active",
+                            "cloud-fluentd-es-config-v0.1.0": "active",
+                            "cloud-fluentd-es-v2.0.2": "active",
+                            "collectd-node-agent": "active",
+                            "datanode": "active",
+                            "default": "active",
+                            "detectron": "active",
+                            "dlws-grafana": "active",
+                            "elasticsearch-logging": "active",
+                            "fluentd-es-config-v0.1.0": "active",
+                            "fluentd-es-v2.0.2": "active",
+                            "freeflowrouter": "active",
+                            "glusterfs": "active",
+                            "google-cadvisor": "active",
+                            "gpuType": "P40",
+                            "hdfs": "active",
+                            "hdfsdatanode": "active",
+                            "hdfsformat": "active",
+                            "hdfsjournal": "active",
+                            "hdfsnn1": "active",
+                            "hdfsnn2": "active",
+                            "hdfsstandby": "active",
+                            "kubernetes.io/hostname": "dltsprod-worker-rsagxh",
+                            "nginx": "active",
+                            "nvidia-device-plugin-daemonset": "active",
+                            "nvidiaheartbeat": "active",
+                            "recogserver": "active",
+                            "sparknode": "active",
+                            "worker": "active",
+                            "yarnnodemanager": "active",
+                            "yarnrm1": "active",
+                            "yarnrm2": "active",
+                            "zk": "active",
+                            "zk-config": "active",
+                            "zk-headless": "active"
+                          },
+                          "name": "dltsprod-worker-rsagxh",
+                          "pods": [
+                            "3a2fe684-b912-4c85-8fdc-381b4e5224c2 : lewisliu (gpu usage:0%)!!!!!! (gpu #:1)",
+                            "d5aea2e7-5d28-43bd-b301-d27489b04175 : joelpf (gpu usage:96%) (gpu #:2)"
+                          ],
+                          "scheduled_service": [
+                            "nvidiaheartbeat",
+                            "cloud-fluentd-es-v2.0.2",
+                            "zk",
+                            "hdfsjournal",
+                            "glusterfs",
+                            "hdfsstandby",
+                            "yarnnodemanager",
+                            "fluentd-es-v2.0.2",
+                            "hdfs",
+                            "nvidia-device-plugin-daemonset",
+                            "cloud-fluentd-es-config-v0.1.0",
+                            "hdfsnn1",
+                            "hdfsnn2",
+                            "datanode",
+                            "recogserver",
+                            "elasticsearch-logging",
+                            "fluentd-es-config-v0.1.0",
+                            "sparknode",
+                            "collectd-node-agent",
+                            "hdfsformat",
+                            "zk-headless",
+                            "zk-config",
+                            "worker",
+                            "dlws-grafana",
+                            "detectron",
+                            "nginx",
+                            "FragmentGPUJob",
+                            "freeflowrouter",
+                            "yarnrm1",
+                            "yarnrm2",
+                            "hdfsdatanode",
+                            "google-cadvisor",
+                            "P40",
+                            "cloud-collectd-node-agent"
+                          ],
+                          "unschedulable": false
+                        },
+                        {
+                          "InternalIP": "192.168.0.6",
+                          "gpuType": "P40",
+                          "gpu_allocatable": {
+                            "P40": 4
+                          },
+                          "gpu_capacity": {
+                            "P40": 4
+                          },
+                          "gpu_used": {
+                            "P40": 4
+                          },
+                          "labels": {
+                            "FragmentGPUJob": "active",
+                            "all": "active",
+                            "beta.kubernetes.io/arch": "amd64",
+                            "beta.kubernetes.io/os": "linux",
+                            "cloud-collectd-node-agent": "active",
+                            "cloud-fluentd-es-config-v0.1.0": "active",
+                            "cloud-fluentd-es-v2.0.2": "active",
+                            "collectd-node-agent": "active",
+                            "datanode": "active",
+                            "default": "active",
+                            "detectron": "active",
+                            "dlws-grafana": "active",
+                            "elasticsearch-logging": "active",
+                            "fluentd-es-config-v0.1.0": "active",
+                            "fluentd-es-v2.0.2": "active",
+                            "freeflowrouter": "active",
+                            "glusterfs": "active",
+                            "google-cadvisor": "active",
+                            "gpuType": "P40",
+                            "hdfs": "active",
+                            "hdfsdatanode": "active",
+                            "hdfsformat": "active",
+                            "hdfsjournal": "active",
+                            "hdfsnn1": "active",
+                            "hdfsnn2": "active",
+                            "hdfsstandby": "active",
+                            "kubernetes.io/hostname": "dltsprod-worker-ivnllv",
+                            "nginx": "active",
+                            "nvidia-device-plugin-daemonset": "active",
+                            "nvidiaheartbeat": "active",
+                            "recogserver": "active",
+                            "sparknode": "active",
+                            "worker": "active",
+                            "yarnnodemanager": "active",
+                            "yarnrm1": "active",
+                            "yarnrm2": "active",
+                            "zk": "active",
+                            "zk-config": "active",
+                            "zk-headless": "active"
+                          },
+                          "name": "dltsprod-worker-ivnllv",
+                          "pods": [
+                            "24913a8c-3d1e-4f24-896d-d1d6b989accc : wutlin (gpu usage:0%)!!!!!! (gpu #:4)"
+                          ],
+                          "scheduled_service": [
+                            "nvidiaheartbeat",
+                            "cloud-fluentd-es-v2.0.2",
+                            "zk",
+                            "hdfsjournal",
+                            "glusterfs",
+                            "hdfsstandby",
+                            "yarnnodemanager",
+                            "fluentd-es-v2.0.2",
+                            "hdfs",
+                            "nvidia-device-plugin-daemonset",
+                            "cloud-fluentd-es-config-v0.1.0",
+                            "hdfsnn1",
+                            "hdfsnn2",
+                            "datanode",
+                            "recogserver",
+                            "elasticsearch-logging",
+                            "fluentd-es-config-v0.1.0",
+                            "sparknode",
+                            "collectd-node-agent",
+                            "hdfsformat",
+                            "zk-headless",
+                            "zk-config",
+                            "worker",
+                            "dlws-grafana",
+                            "detectron",
+                            "nginx",
+                            "FragmentGPUJob",
+                            "freeflowrouter",
+                            "yarnrm1",
+                            "yarnrm2",
+                            "hdfsdatanode",
+                            "google-cadvisor",
+                            "P40",
+                            "cloud-collectd-node-agent"
+                          ],
+                          "unschedulable": false
+                        },
+                        {
+                          "InternalIP": "192.168.0.19",
+                          "gpuType": "P40",
+                          "gpu_allocatable": {
+                            "P40": 4
+                          },
+                          "gpu_capacity": {
+                            "P40": 4
+                          },
+                          "gpu_used": {
+                            "P40": 4
+                          },
+                          "labels": {
+                            "FragmentGPUJob": "active",
+                            "all": "active",
+                            "beta.kubernetes.io/arch": "amd64",
+                            "beta.kubernetes.io/os": "linux",
+                            "cloud-collectd-node-agent": "active",
+                            "cloud-fluentd-es-config-v0.1.0": "active",
+                            "cloud-fluentd-es-v2.0.2": "active",
+                            "collectd-node-agent": "active",
+                            "datanode": "active",
+                            "default": "active",
+                            "detectron": "active",
+                            "dlws-grafana": "active",
+                            "elasticsearch-logging": "active",
+                            "fluentd-es-config-v0.1.0": "active",
+                            "fluentd-es-v2.0.2": "active",
+                            "freeflowrouter": "active",
+                            "glusterfs": "active",
+                            "google-cadvisor": "active",
+                            "gpuType": "P40",
+                            "hdfs": "active",
+                            "hdfsdatanode": "active",
+                            "hdfsformat": "active",
+                            "hdfsjournal": "active",
+                            "hdfsnn1": "active",
+                            "hdfsnn2": "active",
+                            "hdfsstandby": "active",
+                            "kubernetes.io/hostname": "dltsprod-worker-enociv",
+                            "nginx": "active",
+                            "nvidia-device-plugin-daemonset": "active",
+                            "nvidiaheartbeat": "active",
+                            "recogserver": "active",
+                            "sparknode": "active",
+                            "worker": "active",
+                            "yarnnodemanager": "active",
+                            "yarnrm1": "active",
+                            "yarnrm2": "active",
+                            "zk": "active",
+                            "zk-config": "active",
+                            "zk-headless": "active"
+                          },
+                          "name": "dltsprod-worker-enociv",
+                          "pods": [
+                            "747af769-08cc-456d-ab45-3516d92527b7 : anbhu (gpu #:0)",
+                            "ed42fd0b-7ef8-46bb-a6e7-07471b1cdada-worker0 : t-imschl (gpu usage:0%)!!!!!! (gpu #:4)"
+                          ],
+                          "scheduled_service": [
+                            "nvidiaheartbeat",
+                            "cloud-fluentd-es-v2.0.2",
+                            "zk",
+                            "hdfsjournal",
+                            "glusterfs",
+                            "hdfsstandby",
+                            "yarnnodemanager",
+                            "fluentd-es-v2.0.2",
+                            "hdfs",
+                            "nvidia-device-plugin-daemonset",
+                            "cloud-fluentd-es-config-v0.1.0",
+                            "hdfsnn1",
+                            "hdfsnn2",
+                            "datanode",
+                            "recogserver",
+                            "elasticsearch-logging",
+                            "fluentd-es-config-v0.1.0",
+                            "sparknode",
+                            "collectd-node-agent",
+                            "hdfsformat",
+                            "zk-headless",
+                            "zk-config",
+                            "worker",
+                            "dlws-grafana",
+                            "detectron",
+                            "nginx",
+                            "FragmentGPUJob",
+                            "freeflowrouter",
+                            "yarnrm1",
+                            "yarnrm2",
+                            "hdfsdatanode",
+                            "google-cadvisor",
+                            "P40",
+                            "cloud-collectd-node-agent"
+                          ],
+                          "unschedulable": false
+                        },
+                        {
+                          "InternalIP": "192.168.0.15",
+                          "gpuType": "P40",
+                          "gpu_allocatable": {
+                            "P40": 4
+                          },
+                          "gpu_capacity": {
+                            "P40": 4
+                          },
+                          "gpu_used": {
+                            "P40": 4
+                          },
+                          "labels": {
+                            "FragmentGPUJob": "active",
+                            "all": "active",
+                            "beta.kubernetes.io/arch": "amd64",
+                            "beta.kubernetes.io/os": "linux",
+                            "cloud-collectd-node-agent": "active",
+                            "cloud-fluentd-es-config-v0.1.0": "active",
+                            "cloud-fluentd-es-v2.0.2": "active",
+                            "collectd-node-agent": "active",
+                            "datanode": "active",
+                            "default": "active",
+                            "detectron": "active",
+                            "dlws-grafana": "active",
+                            "elasticsearch-logging": "active",
+                            "fluentd-es-config-v0.1.0": "active",
+                            "fluentd-es-v2.0.2": "active",
+                            "freeflowrouter": "active",
+                            "glusterfs": "active",
+                            "google-cadvisor": "active",
+                            "gpuType": "P40",
+                            "hdfs": "active",
+                            "hdfsdatanode": "active",
+                            "hdfsformat": "active",
+                            "hdfsjournal": "active",
+                            "hdfsnn1": "active",
+                            "hdfsnn2": "active",
+                            "hdfsstandby": "active",
+                            "kubernetes.io/hostname": "dltsprod-worker-cnrqrv",
+                            "nginx": "active",
+                            "nvidia-device-plugin-daemonset": "active",
+                            "nvidiaheartbeat": "active",
+                            "recogserver": "active",
+                            "sparknode": "active",
+                            "worker": "active",
+                            "yarnnodemanager": "active",
+                            "yarnrm1": "active",
+                            "yarnrm2": "active",
+                            "zk": "active",
+                            "zk-config": "active",
+                            "zk-headless": "active"
+                          },
+                          "name": "dltsprod-worker-cnrqrv",
+                          "pods": [
+                            "c905178f-36b8-403d-8742-47e7fe357411-worker0 : xuewa (gpu usage:0%)!!!!!! (gpu #:4)"
+                          ],
+                          "scheduled_service": [
+                            "nvidiaheartbeat",
+                            "cloud-fluentd-es-v2.0.2",
+                            "zk",
+                            "hdfsjournal",
+                            "glusterfs",
+                            "hdfsstandby",
+                            "yarnnodemanager",
+                            "fluentd-es-v2.0.2",
+                            "hdfs",
+                            "nvidia-device-plugin-daemonset",
+                            "cloud-fluentd-es-config-v0.1.0",
+                            "hdfsnn1",
+                            "hdfsnn2",
+                            "datanode",
+                            "recogserver",
+                            "elasticsearch-logging",
+                            "fluentd-es-config-v0.1.0",
+                            "sparknode",
+                            "collectd-node-agent",
+                            "hdfsformat",
+                            "zk-headless",
+                            "zk-config",
+                            "worker",
+                            "dlws-grafana",
+                            "detectron",
+                            "nginx",
+                            "FragmentGPUJob",
+                            "freeflowrouter",
+                            "yarnrm1",
+                            "yarnrm2",
+                            "hdfsdatanode",
+                            "google-cadvisor",
+                            "P40",
+                            "cloud-collectd-node-agent"
+                          ],
+                          "unschedulable": false
+                        },
+                        {
+                          "InternalIP": "192.168.0.23",
+                          "gpuType": "P40",
+                          "gpu_allocatable": {
+                            "P40": 4
+                          },
+                          "gpu_capacity": {
+                            "P40": 4
+                          },
+                          "gpu_used": {
+                            "P40": 4
+                          },
+                          "labels": {
+                            "FragmentGPUJob": "active",
+                            "all": "active",
+                            "beta.kubernetes.io/arch": "amd64",
+                            "beta.kubernetes.io/os": "linux",
+                            "cloud-collectd-node-agent": "active",
+                            "cloud-fluentd-es-config-v0.1.0": "active",
+                            "cloud-fluentd-es-v2.0.2": "active",
+                            "collectd-node-agent": "active",
+                            "datanode": "active",
+                            "default": "active",
+                            "detectron": "active",
+                            "dlws-grafana": "active",
+                            "elasticsearch-logging": "active",
+                            "fluentd-es-config-v0.1.0": "active",
+                            "fluentd-es-v2.0.2": "active",
+                            "freeflowrouter": "active",
+                            "glusterfs": "active",
+                            "google-cadvisor": "active",
+                            "gpuType": "P40",
+                            "hdfs": "active",
+                            "hdfsdatanode": "active",
+                            "hdfsformat": "active",
+                            "hdfsjournal": "active",
+                            "hdfsnn1": "active",
+                            "hdfsnn2": "active",
+                            "hdfsstandby": "active",
+                            "kubernetes.io/hostname": "dltsprod-worker-aembay",
+                            "nginx": "active",
+                            "nvidia-device-plugin-daemonset": "active",
+                            "nvidiaheartbeat": "active",
+                            "recogserver": "active",
+                            "sparknode": "active",
+                            "worker": "active",
+                            "yarnnodemanager": "active",
+                            "yarnrm1": "active",
+                            "yarnrm2": "active",
+                            "zk": "active",
+                            "zk-config": "active",
+                            "zk-headless": "active"
+                          },
+                          "name": "dltsprod-worker-aembay",
+                          "pods": [
+                            "aab83fc5-72a3-4877-afab-d39b7ea80b4c : joelpf (gpu usage:0%)!!!!!! (gpu #:4)"
+                          ],
+                          "scheduled_service": [
+                            "nvidiaheartbeat",
+                            "cloud-fluentd-es-v2.0.2",
+                            "zk",
+                            "hdfsjournal",
+                            "glusterfs",
+                            "hdfsstandby",
+                            "yarnnodemanager",
+                            "fluentd-es-v2.0.2",
+                            "hdfs",
+                            "nvidia-device-plugin-daemonset",
+                            "cloud-fluentd-es-config-v0.1.0",
+                            "hdfsnn1",
+                            "hdfsnn2",
+                            "datanode",
+                            "recogserver",
+                            "elasticsearch-logging",
+                            "fluentd-es-config-v0.1.0",
+                            "sparknode",
+                            "collectd-node-agent",
+                            "hdfsformat",
+                            "zk-headless",
+                            "zk-config",
+                            "worker",
+                            "dlws-grafana",
+                            "detectron",
+                            "nginx",
+                            "FragmentGPUJob",
+                            "freeflowrouter",
+                            "yarnrm1",
+                            "yarnrm2",
+                            "hdfsdatanode",
+                            "google-cadvisor",
+                            "P40",
+                            "cloud-collectd-node-agent"
+                          ],
+                          "unschedulable": false
+                        },
+                        {
+                          "InternalIP": "192.168.0.17",
+                          "gpuType": "P40",
+                          "gpu_allocatable": {
+                            "P40": 3
+                          },
+                          "gpu_capacity": {
+                            "P40": 3
+                          },
+                          "gpu_used": {
+                            "P40": 2
+                          },
+                          "labels": {
+                            "FragmentGPUJob": "active",
+                            "all": "active",
+                            "beta.kubernetes.io/arch": "amd64",
+                            "beta.kubernetes.io/os": "linux",
+                            "cloud-collectd-node-agent": "active",
+                            "cloud-fluentd-es-config-v0.1.0": "active",
+                            "cloud-fluentd-es-v2.0.2": "active",
+                            "collectd-node-agent": "active",
+                            "datanode": "active",
+                            "default": "active",
+                            "detectron": "active",
+                            "dlws-grafana": "active",
+                            "elasticsearch-logging": "active",
+                            "fluentd-es-config-v0.1.0": "active",
+                            "fluentd-es-v2.0.2": "active",
+                            "freeflowrouter": "active",
+                            "glusterfs": "active",
+                            "google-cadvisor": "active",
+                            "gpuType": "P40",
+                            "hdfs": "active",
+                            "hdfsdatanode": "active",
+                            "hdfsformat": "active",
+                            "hdfsjournal": "active",
+                            "hdfsnn1": "active",
+                            "hdfsnn2": "active",
+                            "hdfsstandby": "active",
+                            "kubernetes.io/hostname": "dltsprod-worker-xrhdbb",
+                            "nginx": "active",
+                            "nvidia-device-plugin-daemonset": "active",
+                            "nvidiaheartbeat": "active",
+                            "recogserver": "active",
+                            "sparknode": "active",
+                            "worker": "active",
+                            "yarnnodemanager": "active",
+                            "yarnrm1": "active",
+                            "yarnrm2": "active",
+                            "zk": "active",
+                            "zk-config": "active",
+                            "zk-headless": "active"
+                          },
+                          "name": "dltsprod-worker-xrhdbb",
+                          "pods": [
+                            "75d09123-66ee-4fe6-b73b-0b65656ec2c2 : owmohamm (gpu usage:0%)!!!!!! (gpu #:2)",
+                            "c905178f-36b8-403d-8742-47e7fe357411-ps0 : xuewa (gpu #:0)"
+                          ],
+                          "scheduled_service": [
+                            "nvidiaheartbeat",
+                            "cloud-fluentd-es-v2.0.2",
+                            "zk",
+                            "hdfsjournal",
+                            "glusterfs",
+                            "hdfsstandby",
+                            "yarnnodemanager",
+                            "fluentd-es-v2.0.2",
+                            "hdfs",
+                            "nvidia-device-plugin-daemonset",
+                            "cloud-fluentd-es-config-v0.1.0",
+                            "hdfsnn1",
+                            "hdfsnn2",
+                            "datanode",
+                            "recogserver",
+                            "elasticsearch-logging",
+                            "fluentd-es-config-v0.1.0",
+                            "sparknode",
+                            "collectd-node-agent",
+                            "hdfsformat",
+                            "zk-headless",
+                            "zk-config",
+                            "worker",
+                            "dlws-grafana",
+                            "detectron",
+                            "nginx",
+                            "FragmentGPUJob",
+                            "freeflowrouter",
+                            "yarnrm1",
+                            "yarnrm2",
+                            "hdfsdatanode",
+                            "google-cadvisor",
+                            "P40",
+                            "cloud-collectd-node-agent"
+                          ],
+                          "unschedulable": false
+                        },
+                        {
+                          "InternalIP": "192.168.0.14",
+                          "gpuType": "P40",
+                          "gpu_allocatable": {
+                            "P40": 4
+                          },
+                          "gpu_capacity": {
+                            "P40": 4
+                          },
+                          "gpu_used": {
+                            "P40": 2
+                          },
+                          "labels": {
+                            "FragmentGPUJob": "active",
+                            "all": "active",
+                            "beta.kubernetes.io/arch": "amd64",
+                            "beta.kubernetes.io/os": "linux",
+                            "cloud-collectd-node-agent": "active",
+                            "cloud-fluentd-es-config-v0.1.0": "active",
+                            "cloud-fluentd-es-v2.0.2": "active",
+                            "collectd-node-agent": "active",
+                            "datanode": "active",
+                            "default": "active",
+                            "detectron": "active",
+                            "dlws-grafana": "active",
+                            "elasticsearch-logging": "active",
+                            "fluentd-es-config-v0.1.0": "active",
+                            "fluentd-es-v2.0.2": "active",
+                            "freeflowrouter": "active",
+                            "glusterfs": "active",
+                            "google-cadvisor": "active",
+                            "gpuType": "P40",
+                            "hdfs": "active",
+                            "hdfsdatanode": "active",
+                            "hdfsformat": "active",
+                            "hdfsjournal": "active",
+                            "hdfsnn1": "active",
+                            "hdfsnn2": "active",
+                            "hdfsstandby": "active",
+                            "kubernetes.io/hostname": "dltsprod-worker-xyrmje",
+                            "nginx": "active",
+                            "nvidia-device-plugin-daemonset": "active",
+                            "nvidiaheartbeat": "active",
+                            "recogserver": "active",
+                            "sparknode": "active",
+                            "worker": "active",
+                            "yarnnodemanager": "active",
+                            "yarnrm1": "active",
+                            "yarnrm2": "active",
+                            "zk": "active",
+                            "zk-config": "active",
+                            "zk-headless": "active"
+                          },
+                          "name": "dltsprod-worker-xyrmje",
+                          "pods": [
+                            "ad47e702-c4e2-4a69-b74a-a18c77e0a27d : nsarangi (gpu usage:0%)!!!!!! (gpu #:1)",
+                            "bfa80d43-213c-40c9-8372-eccc94951e1a : kafilali (gpu usage:4%)!!!!!! (gpu #:1)",
+                            "phpmyadmin (gpu #:0)",
+                            "prometheus-operator-b96f867cd-f5xnx (gpu #:0)"
+                          ],
+                          "scheduled_service": [
+                            "nvidiaheartbeat",
+                            "cloud-fluentd-es-v2.0.2",
+                            "zk",
+                            "hdfsjournal",
+                            "glusterfs",
+                            "hdfsstandby",
+                            "yarnnodemanager",
+                            "fluentd-es-v2.0.2",
+                            "hdfs",
+                            "nvidia-device-plugin-daemonset",
+                            "cloud-fluentd-es-config-v0.1.0",
+                            "hdfsnn1",
+                            "hdfsnn2",
+                            "datanode",
+                            "recogserver",
+                            "elasticsearch-logging",
+                            "fluentd-es-config-v0.1.0",
+                            "sparknode",
+                            "collectd-node-agent",
+                            "hdfsformat",
+                            "zk-headless",
+                            "zk-config",
+                            "worker",
+                            "dlws-grafana",
+                            "detectron",
+                            "nginx",
+                            "FragmentGPUJob",
+                            "freeflowrouter",
+                            "yarnrm1",
+                            "yarnrm2",
+                            "hdfsdatanode",
+                            "google-cadvisor",
+                            "P40",
+                            "cloud-collectd-node-agent"
+                          ],
+                          "unschedulable": false
+                        },
+                        {
+                          "InternalIP": "192.168.0.7",
+                          "gpuType": "P40",
+                          "gpu_allocatable": {
+                            "P40": 4
+                          },
+                          "gpu_capacity": {
+                            "P40": 4
+                          },
+                          "gpu_used": {
+                            "P40": 4
+                          },
+                          "labels": {
+                            "FragmentGPUJob": "active",
+                            "all": "active",
+                            "beta.kubernetes.io/arch": "amd64",
+                            "beta.kubernetes.io/os": "linux",
+                            "cloud-collectd-node-agent": "active",
+                            "cloud-fluentd-es-config-v0.1.0": "active",
+                            "cloud-fluentd-es-v2.0.2": "active",
+                            "collectd-node-agent": "active",
+                            "datanode": "active",
+                            "default": "active",
+                            "detectron": "active",
+                            "dlws-grafana": "active",
+                            "elasticsearch-logging": "active",
+                            "fluentd-es-config-v0.1.0": "active",
+                            "fluentd-es-v2.0.2": "active",
+                            "freeflowrouter": "active",
+                            "glusterfs": "active",
+                            "google-cadvisor": "active",
+                            "gpuType": "P40",
+                            "hdfs": "active",
+                            "hdfsdatanode": "active",
+                            "hdfsformat": "active",
+                            "hdfsjournal": "active",
+                            "hdfsnn1": "active",
+                            "hdfsnn2": "active",
+                            "hdfsstandby": "active",
+                            "kubernetes.io/hostname": "dltsprod-worker-glcwsl",
+                            "nginx": "active",
+                            "nvidia-device-plugin-daemonset": "active",
+                            "nvidiaheartbeat": "active",
+                            "recogserver": "active",
+                            "sparknode": "active",
+                            "worker": "active",
+                            "yarnnodemanager": "active",
+                            "yarnrm1": "active",
+                            "yarnrm2": "active",
+                            "zk": "active",
+                            "zk-config": "active",
+                            "zk-headless": "active"
+                          },
+                          "name": "dltsprod-worker-glcwsl",
+                          "pods": [
+                            "411737ae-9c59-407a-ae72-0eca139cc937 : qixcheng (gpu usage:0%)!!!!!! (gpu #:1)",
+                            "7bcacad6-655d-45ec-b86f-0a122703dd2c : t-anyi (gpu usage:0%)!!!!!! (gpu #:1)",
+                            "b9254084-4f91-49d9-8800-f019a80b978e : nsarangi (gpu usage:0%)!!!!!! (gpu #:2)"
+                          ],
+                          "scheduled_service": [
+                            "nvidiaheartbeat",
+                            "cloud-fluentd-es-v2.0.2",
+                            "zk",
+                            "hdfsjournal",
+                            "glusterfs",
+                            "hdfsstandby",
+                            "yarnnodemanager",
+                            "fluentd-es-v2.0.2",
+                            "hdfs",
+                            "nvidia-device-plugin-daemonset",
+                            "cloud-fluentd-es-config-v0.1.0",
+                            "hdfsnn1",
+                            "hdfsnn2",
+                            "datanode",
+                            "recogserver",
+                            "elasticsearch-logging",
+                            "fluentd-es-config-v0.1.0",
+                            "sparknode",
+                            "collectd-node-agent",
+                            "hdfsformat",
+                            "zk-headless",
+                            "zk-config",
+                            "worker",
+                            "dlws-grafana",
+                            "detectron",
+                            "nginx",
+                            "FragmentGPUJob",
+                            "freeflowrouter",
+                            "yarnrm1",
+                            "yarnrm2",
+                            "hdfsdatanode",
+                            "google-cadvisor",
+                            "P40",
+                            "cloud-collectd-node-agent"
+                          ],
+                          "unschedulable": false
+                        },
+                        {
+                          "InternalIP": "192.168.0.5",
+                          "gpuType": "P40",
+                          "gpu_allocatable": {
+                            "P40": 4
+                          },
+                          "gpu_capacity": {
+                            "P40": 4
+                          },
+                          "gpu_used": {
+                            "P40": 4
+                          },
+                          "labels": {
+                            "FragmentGPUJob": "active",
+                            "all": "active",
+                            "beta.kubernetes.io/arch": "amd64",
+                            "beta.kubernetes.io/os": "linux",
+                            "cloud-collectd-node-agent": "active",
+                            "cloud-fluentd-es-config-v0.1.0": "active",
+                            "cloud-fluentd-es-v2.0.2": "active",
+                            "collectd-node-agent": "active",
+                            "datanode": "active",
+                            "default": "active",
+                            "detectron": "active",
+                            "dlws-grafana": "active",
+                            "elasticsearch-logging": "active",
+                            "fluentd-es-config-v0.1.0": "active",
+                            "fluentd-es-v2.0.2": "active",
+                            "freeflowrouter": "active",
+                            "glusterfs": "active",
+                            "google-cadvisor": "active",
+                            "gpuType": "P40",
+                            "hdfs": "active",
+                            "hdfsdatanode": "active",
+                            "hdfsformat": "active",
+                            "hdfsjournal": "active",
+                            "hdfsnn1": "active",
+                            "hdfsnn2": "active",
+                            "hdfsstandby": "active",
+                            "kubernetes.io/hostname": "dltsprod-worker-cpcniv",
+                            "nginx": "active",
+                            "nvidia-device-plugin-daemonset": "active",
+                            "nvidiaheartbeat": "active",
+                            "recogserver": "active",
+                            "sparknode": "active",
+                            "worker": "active",
+                            "yarnnodemanager": "active",
+                            "yarnrm1": "active",
+                            "yarnrm2": "active",
+                            "zk": "active",
+                            "zk-config": "active",
+                            "zk-headless": "active"
+                          },
+                          "name": "dltsprod-worker-cpcniv",
+                          "pods": [
+                            "c905178f-36b8-403d-8742-47e7fe357411-worker1 : xuewa (gpu usage:0%)!!!!!! (gpu #:4)"
+                          ],
+                          "scheduled_service": [
+                            "nvidiaheartbeat",
+                            "cloud-fluentd-es-v2.0.2",
+                            "zk",
+                            "hdfsjournal",
+                            "glusterfs",
+                            "hdfsstandby",
+                            "yarnnodemanager",
+                            "fluentd-es-v2.0.2",
+                            "hdfs",
+                            "nvidia-device-plugin-daemonset",
+                            "cloud-fluentd-es-config-v0.1.0",
+                            "hdfsnn1",
+                            "hdfsnn2",
+                            "datanode",
+                            "recogserver",
+                            "elasticsearch-logging",
+                            "fluentd-es-config-v0.1.0",
+                            "sparknode",
+                            "collectd-node-agent",
+                            "hdfsformat",
+                            "zk-headless",
+                            "zk-config",
+                            "worker",
+                            "dlws-grafana",
+                            "detectron",
+                            "nginx",
+                            "FragmentGPUJob",
+                            "freeflowrouter",
+                            "yarnrm1",
+                            "yarnrm2",
+                            "hdfsdatanode",
+                            "google-cadvisor",
+                            "P40",
+                            "cloud-collectd-node-agent"
+                          ],
+                          "unschedulable": false
+                        },
+                        {
+                          "InternalIP": "192.168.0.12",
+                          "gpuType": "P40",
+                          "gpu_allocatable": {
+                            "P40": 4
+                          },
+                          "gpu_capacity": {
+                            "P40": 4
+                          },
+                          "gpu_used": {
+                            "P40": 3
+                          },
+                          "labels": {
+                            "FragmentGPUJob": "active",
+                            "all": "active",
+                            "beta.kubernetes.io/arch": "amd64",
+                            "beta.kubernetes.io/os": "linux",
+                            "cloud-collectd-node-agent": "active",
+                            "cloud-fluentd-es-config-v0.1.0": "active",
+                            "cloud-fluentd-es-v2.0.2": "active",
+                            "collectd-node-agent": "active",
+                            "datanode": "active",
+                            "default": "active",
+                            "detectron": "active",
+                            "dlws-grafana": "active",
+                            "elasticsearch-logging": "active",
+                            "fluentd-es-config-v0.1.0": "active",
+                            "fluentd-es-v2.0.2": "active",
+                            "freeflowrouter": "active",
+                            "glusterfs": "active",
+                            "google-cadvisor": "active",
+                            "gpuType": "P40",
+                            "hdfs": "active",
+                            "hdfsdatanode": "active",
+                            "hdfsformat": "active",
+                            "hdfsjournal": "active",
+                            "hdfsnn1": "active",
+                            "hdfsnn2": "active",
+                            "hdfsstandby": "active",
+                            "kubernetes.io/hostname": "dltsprod-worker-ljomqh",
+                            "nginx": "active",
+                            "nvidia-device-plugin-daemonset": "active",
+                            "nvidiaheartbeat": "active",
+                            "recogserver": "active",
+                            "sparknode": "active",
+                            "worker": "active",
+                            "yarnnodemanager": "active",
+                            "yarnrm1": "active",
+                            "yarnrm2": "active",
+                            "zk": "active",
+                            "zk-config": "active",
+                            "zk-headless": "active"
+                          },
+                          "name": "dltsprod-worker-ljomqh",
+                          "pods": [
+                            "113cdf0e-1fe6-4374-b5da-3c80cef83ace : anbhu (gpu #:0)",
+                            "33a8d25c-e79a-4d8f-98b1-95f0a1007f76 : v-liuhon (gpu usage:0%)!!!!!! (gpu #:1)",
+                            "7512db3a-b2db-4dfe-b741-cca887024d0d : nazikh (gpu usage:0%)!!!!!! (gpu #:2)",
+                            "97633ec1-8818-463e-8b46-2a029f911f67 : anbhu (gpu #:0)",
+                            "ed42fd0b-7ef8-46bb-a6e7-07471b1cdada-ps0 : t-imschl (gpu #:0)"
+                          ],
+                          "scheduled_service": [
+                            "nvidiaheartbeat",
+                            "cloud-fluentd-es-v2.0.2",
+                            "zk",
+                            "hdfsjournal",
+                            "glusterfs",
+                            "hdfsstandby",
+                            "yarnnodemanager",
+                            "fluentd-es-v2.0.2",
+                            "hdfs",
+                            "nvidia-device-plugin-daemonset",
+                            "cloud-fluentd-es-config-v0.1.0",
+                            "hdfsnn1",
+                            "hdfsnn2",
+                            "datanode",
+                            "recogserver",
+                            "elasticsearch-logging",
+                            "fluentd-es-config-v0.1.0",
+                            "sparknode",
+                            "collectd-node-agent",
+                            "hdfsformat",
+                            "zk-headless",
+                            "zk-config",
+                            "worker",
+                            "dlws-grafana",
+                            "detectron",
+                            "nginx",
+                            "FragmentGPUJob",
+                            "freeflowrouter",
+                            "yarnrm1",
+                            "yarnrm2",
+                            "hdfsdatanode",
+                            "google-cadvisor",
+                            "P40",
+                            "cloud-collectd-node-agent"
+                          ],
+                          "unschedulable": false
+                        }
+                      ]
+                    user_status: [
+                          {
+                            "userGPU": {
+                              "P40": 0
+                            },
+                            "userName": "anbhu"
+                          },
+                          {
+                            "userGPU": {
+                              "P40": 8
+                            },
+                            "userName": "xuewa"
+                          },
+                          {
+                            "userGPU": {
+                              "P40": 2
+                            },
+                            "userName": "nazikh"
+                          },
+                          {
+                            "userGPU": {
+                              "P40": 1
+                            },
+                            "userName": "qixcheng"
+                          },
+                          {
+                            "userGPU": {
+                              "P40": 1
+                            },
+                            "userName": "euka"
+                          },
+                          {
+                            "userGPU": {
+                              "P40": 1
+                            },
+                            "userName": "kafilali"
+                          },
+                          {
+                            "userGPU": {
+                              "P40": 3
+                            },
+                            "userName": "nsarangi"
+                          },
+                          {
+                            "userGPU": {
+                              "P40": 1
+                            },
+                            "userName": "lewisliu"
+                          },
+                          {
+                            "userGPU": {
+                              "P40": 4
+                            },
+                            "userName": "wutlin"
+                          },
+                          {
+                            "userGPU": {
+                              "P40": 6
+                            },
+                            "userName": "joelpf"
+                          },
+                          {
+                            "userGPU": {
+                              "P40": 4
+                            },
+                            "userName": "t-imschl"
+                          },
+                          {
+                            "userGPU": {
+                              "P40": 2
+                            },
+                            "userName": "v-liuhon"
+                          },
+                          {
+                            "userGPU": {
+                              "P40": 1
+                            },
+                            "userName": "t-anyi"
+                          },
+                          {
+                            "userGPU": {
+                              "P40": 1
+                            },
+                            "userName": "lexion"
+                          },
+                          {
+                            "userGPU": {
+                              "P40": 2
+                            },
+                            "userName": "owmohamm"
+                          }
+                      ]                                        
   '/DeleteTemplate':
     get:
       tags:
@@ -4294,6 +5588,111 @@ paths:
       responses:
         200:
           description: OK
+          content:
+            application/json:
+              example:
+               [
+                  {
+                  "Name": "None",
+                  "Json": "{}"
+                  },
+                  {
+                  "Name": "Caffe training example",
+                  "Username": "",
+                  "Json": "{\"jobName\" : \"caffe training example - resnet18\", \"resourcegpu\" : 1, \"workPath\" : \"samples\", \"image\" : \"bvlc/caffe:gpu\", \"cmd\" : \"caffe train -solver /work/caffe/solver_resnet18.prototxt\", \"interactivePort\" : \"\"}\r\n",
+                  "Database": "Master"
+                  },
+                  {
+                  "Name": "Caffe-iPython-SSH-CPU",
+                  "Username": "",
+                  "Json": "{\"jobName\":\"caffe-ssh-ipython-cpu\",\"resourcegpu\":0,\"workPath\":\"./\",\"dataPath\":\"imagenet\",\"jobPath\":\"\",\"image\":\"bvlc/caffe:cpu\",\"cmd\":\"apt-get update && apt-get install -y python-pip openssh-server sudo && pip install jupyter && addgroup --force-badname --gid  $$gid$$ domainusers && adduser --force-badname --home /home/$$username$$ --shell /bin/bash --uid $$uid$$  -gecos '' $$username$$  --gid $$gid$$ --disabled-password  && usermod -p $(echo tryme2017 | openssl passwd -1 -stdin) $$username$$ && adduser $$username$$ sudo && echo '%sudo ALL=(ALL) NOPASSWD:ALL' >> /etc/sudoers && ( mkdir -p /root/.ssh && cat /work/.ssh/id_rsa.pub >> /root/.ssh/authorized_keys && mkdir -p /home/$$username$$/.ssh && cat /work/.ssh/id_rsa.pub >> /home/$$username$$/.ssh/authorized_keys && cp /work/.ssh/id_rsa* /home/$$username$$/.ssh/ ;  chown -R $$username$$ /home/$$username$$/ || /bin/true ) && service ssh restart && env | while read line; do if [[ $line != HOME=* ]] && [[ $line != INTERACTIVE* ]] ; then echo \\\"export $line\\\" >> /home/$$username$$/.bashrc; fi; done &&  export HOME=/job && runuser -l $$username$$ -c \\\"jupyter notebook --no-browser --port=8888 --ip=0.0.0.0 --notebook-dir=/\\\"\",\"is_interactive\":true,\"do_log\":false,\"interactivePort\":\"22, 8888\",\"runningasroot\":true,\"mountpoints\":[],\"env\":[],\"jobtrainingtype\":\"RegularJob\",\"enableworkpath\":true,\"enabledatapath\":true,\"enablejobpath\":true}",
+                  "Database": "Master"
+                  },
+                  {
+                  "Name": "DeepScale1.0-Distributed",
+                  "Username": "anbhu@microsoft.com",
+                  "Json": "{\"resourcegpu\":4,\"workPath\":\".\",\"dataPath\":\".\",\"jobPath\":\"\",\"enableworkpath\":true,\"enabledatapath\":true,\"enablejobpath\":true,\"do_log\":false,\"runningasroot\":true,\"is_interactive\":false,\"mountpoints\":[{\"name\":\"homefolder\",\"containerPath\":\"/home/anbhu\",\"hostPath\":\"/dlwsdata/work/anbhu\",\"description\":\"NFS (remote file share)\",\"enabled\":true,\"$$hashKey\":\"object:32\"}],\"env\":[],\"jobtrainingtype\":\"PSDistJob\",\"jobName\":\"DeepScale1.0-Distributed\",\"numps\":1,\"numpsworker\":2,\"image\":\"indexserveregistry.azurecr.io/deepscale:1.0.post0\",\"ssh\":true,\"hostNetwork\":true,\"cmd\":\"##################################################\\n# DeepScale 1.0 redirect (Start)\\n##################################################\\nset -e\\n\\nhostname\\nwhoami\\n\\n# Create DeepScale 1.0 redirect on master node\\nsudo chmod -R 777 /root && mkdir -p /root/.ssh && rm -f /root/.ssh/config && ln -s ~/.ssh/config /root/.ssh/config && echo \\\"/root/.ssh/config created\\\" && ls -l /root/.ssh\\nmkdir -p /opt && sudo rm -f /opt/hostfile && sudo ln -s /job/hostfile /opt/hostfile && cat /opt/hostfile\\n\\n# Create DeepScale 1.0 redirect for all workers\\nfor i in $(seq 0 $(( ${DLWS_NUM_WORKER} - 1 ))); do\\n    echo \\\"Creating DeepScale 1.0 redirect for worker ${i}\\\"\\n    ssh worker-${i} \\\"sudo chmod -R 777 /root && mkdir -p /root/.ssh && rm -f /root/.ssh/config && ln -s ~/.ssh/config /root/.ssh/config && echo \\\"/root/.ssh/config created\\\" && ls -l /root/.ssh\\\"\\n    ssh worker-${i} \\\"mkdir -p /opt && sudo rm -f /opt/hostfile && sudo ln -s /job/hostfile /opt/hostfile && cat /opt/hostfile\\\"\\n    done\\n##################################################\\n# DeepScale 1.0 redirect (End)\\n##################################################\\n\\n##################################################\\n# User command starts here\\n##################################################\\nsleep infinity\",\"interactivePorts\":[],\"isPrivileged\":true,\"dnsPolicy\":\"Default\"}",
+                  "Database": "Master"
+                  },
+                  {
+                  "Name": "DeepScale1.0-Regular",
+                  "Username": "anbhu@microsoft.com",
+                  "Json": "{\"resourcegpu\":1,\"workPath\":\".\",\"dataPath\":\".\",\"jobPath\":\"\",\"enableworkpath\":true,\"enabledatapath\":true,\"enablejobpath\":true,\"do_log\":false,\"runningasroot\":true,\"is_interactive\":false,\"mountpoints\":[{\"name\":\"homefolder\",\"containerPath\":\"/home/anbhu\",\"hostPath\":\"/dlwsdata/work/anbhu\",\"description\":\"NFS (remote file share)\",\"enabled\":true,\"$$hashKey\":\"object:28\"}],\"env\":[],\"jobtrainingtype\":\"RegularJob\",\"jobName\":\"DeepScale1.0-Regular\",\"ssh\":true,\"image\":\"indexserveregistry.azurecr.io/deepscale:1.0.post0\",\"cmd\":\"sleep infinity\",\"interactivePorts\":[]}",
+                  "Database": "Master"
+                  },
+                  {
+                  "Name": "DeepScale1.0-Workshop",
+                  "Username": "anbhu@microsoft.com",
+                  "Json": "{\"resourcegpu\":1,\"workPath\":\".\",\"dataPath\":\".\",\"jobPath\":\"\",\"enableworkpath\":true,\"enabledatapath\":true,\"enablejobpath\":true,\"do_log\":false,\"runningasroot\":true,\"is_interactive\":false,\"mountpoints\":[{\"name\":\"homefolder\",\"containerPath\":\"/home/anbhu\",\"hostPath\":\"/dlwsdata/work/anbhu\",\"description\":\"NFS (remote file share)\",\"enabled\":true,\"$$hashKey\":\"object:31\"}],\"env\":[],\"jobtrainingtype\":\"RegularJob\",\"jobName\":\"DeepScale1.0-Regular\",\"ssh\":true,\"image\":\"indexserveregistry.azurecr.io/deepscale:1.0.post0\",\"cmd\":\"sudo cp /root/.bashrc ~/\\necho \\\"if [ -f /dlws/pod.env ]; then . /dlws/pod.env; fi\\\" > ~/.profile\\necho \\\". ~/.bashrc\\\" >> ~/.profile\\nsudo pip install visdom\\nsleep infinity\"}",
+                  "Database": "Master"
+                  },
+                  {
+                  "Name": "Relevance-PyTorch",
+                  "Username": "anbhu@microsoft.com",
+                  "Json": "{\"resourcegpu\":4,\"workPath\":\".\",\"dataPath\":\".\",\"jobPath\":\"\",\"enableworkpath\":true,\"enabledatapath\":true,\"enablejobpath\":true,\"do_log\":false,\"runningasroot\":true,\"is_interactive\":false,\"mountpoints\":[{\"name\":\"homefolder\",\"containerPath\":\"/home/anbhu\",\"hostPath\":\"/dlwsdata/work/anbhu\",\"description\":\"NFS (remote file share)\",\"enabled\":true,\"$$hashKey\":\"object:28\"}],\"env\":[],\"jobtrainingtype\":\"PSDistJob\",\"jobName\":\"Relevance-PyTorch\",\"ssh\":true,\"image\":\"indexserveregistry.azurecr.io/deepscale:bert_pytorch1.0.1_tensorflow1.13.1_gpu_cuda10.0_py36_release_gpuenv_hvd0.15.2-mlx-update_apex_fp16-port22\",\"numps\":1,\"numpsworker\":2,\"cmd\":\"##################################################\\n# Redirect (Start)\\n##################################################\\nset -e\\n\\nhostname\\nwhoami\\n\\n# Create redirect on master node\\nsudo chmod -R 777 /root && mkdir -p /root/.ssh && rm -f /root/.ssh/config && ln -s ~/.ssh/config /root/.ssh/config && echo \\\"/root/.ssh/config created\\\" && ls -l /root/.ssh\\nmkdir -p /opt && sudo rm -f /opt/hostfile && sudo ln -s /job/hostfile /opt/hostfile && cat /opt/hostfile\\n\\n# Create redirect for all workers\\nfor i in $(seq 0 $(( ${DLWS_NUM_WORKER} - 1 ))); do\\n    echo \\\"Creating redirect for worker ${i}\\\"\\n    ssh worker-${i} \\\"sudo chmod -R 777 /root && mkdir -p /root/.ssh && rm -f /root/.ssh/config && ln -s ~/.ssh/config /root/.ssh/config && echo \\\"/root/.ssh/config created\\\" && ls -l /root/.ssh\\\"\\n    ssh worker-${i} \\\"mkdir -p /opt && sudo rm -f /opt/hostfile && sudo ln -s /job/hostfile /opt/hostfile && cat /opt/hostfile\\\"\\n    done\\n##################################################\\n# Redirect (End)\\n##################################################\\n\\n##################################################\\n# User command starts here\\n##################################################\\nsleep infinity\",\"hostNetwork\":true,\"isPrivileged\":true,\"dnsPolicy\":\"Default\",\"interactivePorts\":[]}",
+                  "Database": "Master"
+                  },
+                  {
+                  "Name": "Relevance-PyTorch1.1.0",
+                  "Username": "anbhu@microsoft.com",
+                  "Json": "{\"resourcegpu\":4,\"workPath\":\".\",\"dataPath\":\".\",\"jobPath\":\"\",\"enableworkpath\":true,\"enabledatapath\":true,\"enablejobpath\":true,\"do_log\":false,\"runningasroot\":true,\"is_interactive\":false,\"mountpoints\":[{\"name\":\"homefolder\",\"containerPath\":\"/home/anbhu\",\"hostPath\":\"/dlwsdata/work/anbhu\",\"description\":\"NFS (remote file share)\",\"enabled\":true,\"$$hashKey\":\"object:28\"}],\"env\":[],\"jobtrainingtype\":\"PSDistJob\",\"jobName\":\"Relevance-PyTorch1.1.0\",\"ssh\":true,\"image\":\"indexserveregistry.azurecr.io/deepscale:bert_pytorch1.1.0_tensorflow1.13.1_gpu_cuda10.0_py36_release_gpuenv_hvd0.15.2-mlx-update_apex_fp16\",\"numps\":1,\"numpsworker\":2,\"cmd\":\"##################################################\\n# Redirect (Start)\\n##################################################\\nset -e\\n\\nhostname\\nwhoami\\n\\n# Create redirect on master node\\nsudo chmod -R 777 /root && mkdir -p /root/.ssh && rm -f /root/.ssh/config && ln -s ~/.ssh/config /root/.ssh/config && echo \\\"/root/.ssh/config created\\\" && ls -l /root/.ssh\\nmkdir -p /opt && sudo rm -f /opt/hostfile && sudo ln -s /job/hostfile /opt/hostfile && cat /opt/hostfile\\n\\n# Create redirect for all workers\\nfor i in $(seq 0 $(( ${DLWS_NUM_WORKER} - 1 ))); do\\n    echo \\\"Creating redirect for worker ${i}\\\"\\n    ssh worker-${i} \\\"sudo chmod -R 777 /root && mkdir -p /root/.ssh && rm -f /root/.ssh/config && ln -s ~/.ssh/config /root/.ssh/config && echo \\\"/root/.ssh/config created\\\" && ls -l /root/.ssh\\\"\\n    ssh worker-${i} \\\"mkdir -p /opt && sudo rm -f /opt/hostfile && sudo ln -s /job/hostfile /opt/hostfile && cat /opt/hostfile\\\"\\n    done\\n##################################################\\n# Redirect (End)\\n##################################################\\n\\n##################################################\\n# User command starts here\\n##################################################\\nsleep infinity\",\"hostNetwork\":true,\"isPrivileged\":true,\"dnsPolicy\":\"Default\",\"interactivePorts\":[]}",
+                  "Database": "Master"
+                  },
+                  {
+                  "Name": "Tensorflow training example",
+                  "Username": "",
+                  "Json": "{\"jobName\" : \"Tensorflow training example - inception\", \"resourcegpu\" : 1, \"workPath\" : \"samples\", \"image\" : \"tensorflow/tensorflow:0.12.1-gpu\", \"cmd\" : \"/work/tensorflow/models/inception/bazel-bin/inception/imagenet_train --num_gpus=1 --batch_size=32 --train_dir=/job/model --data_dir=/data/tensor\", \"interactivePort\" : \"\"}\r\n",
+                  "Database": "Master"
+                  },
+                  {
+                  "Name": "Tensorflow-IPython-GPU",
+                  "Username": "",
+                  "Json": "{\"jobName\":\"tensorflow-ipython\",\"resourcegpu\":1,\"image\":\"tensorflow/tensorflow:latest-gpu\",\"cmd\":\"export HOME=/job && jupyter notebook --no-browser --port=8888 --ip=0.0.0.0 --notebook-dir=/\",\"is_interactive\":true,\"mountpoints\":[{\"containerPath\":\"/home/jinl\",\"hostPath\":\"/dlwsdata/work/jinl\",\"description\":\"NFS (remote file share)\",\"enabled\":true,\"$$hashKey\":\"object:102\"},{\"containerPath\":\"/glusterfs/public\",\"hostPath\":\"/dlwsdata/glusterfs/public\",\"description\":\"GlusterFS (replicated distributed storage)\",\"enabled\":true,\"$$hashKey\":\"object:74\"}],\"do_log\":false,\"runningasroot\":false,\"env\":[],\"PSDistJob\":false,\"jobtrainingtype\":\"RegularJob\",\"enableworkpath\":true,\"enabledatapath\":true,\"enablejobpath\":true,\"interactivePort\":\"8888\"}",
+                  "Database": "Master"
+                  },
+                  {
+                  "Name": "Test Template",
+                  "Username": "",
+                  "Json": "{\"image\":\"ubuntu:16.04\"}",
+                  "Database": "Master"
+                  },
+                  {
+                  "Name": "tutorial-caffe2-cpu",
+                  "Username": "",
+                  "Json": "{\"jobName\":\"caffe2-detectron-cpu\",\"resourcegpu\":0,\"workPath\":\"./\",\"dataPath\":\"imagenet\",\"jobPath\":\"\",\"image\":\"dlws/tutorial-caffe2-cpu:1.5\",\"cmd\":\"apt-get update && apt-get install -y openssh-server sudo &&  addgroup --force-badname --gid  $$gid$$ domainusers && adduser --force-badname --home /home/$$username$$ --shell /bin/bash --uid $$uid$$  -gecos '' $$username$$  --gid $$gid$$ --disabled-password  && usermod -p $(echo tryme2017 | openssl passwd -1 -stdin) $$username$$ && usermod -p $(echo tryme2017 | openssl passwd -1 -stdin) root && adduser $$username$$ sudo && echo '%sudo ALL=(ALL) NOPASSWD:ALL' >> /etc/sudoers && mkdir -p /root/.ssh && cat /work/.ssh/id_rsa.pub >> /root/.ssh/authorized_keys && service ssh restart && env | while read line; do if [[ $line != HOME=* ]] && [[ $line != INTERACTIVE* ]] ; then echo \\\"export $line\\\" >> /home/$$username$$/.bashrc; fi; done &&  export HOME=/job && jupyter notebook --no-browser --port=8888 --ip=0.0.0.0 --notebook-dir=/ --allow-root\",\"is_interactive\":true,\"do_log\":false,\"interactivePort\":\"22, 8888, 6006\",\"runningasroot\":true,\"mountpoints\":[],\"env\":[],\"jobtrainingtype\":\"RegularJob\",\"enableworkpath\":true,\"enabledatapath\":true,\"enablejobpath\":true}",
+                  "Database": "Master"
+                  },
+                  {
+                  "Name": "Tutorial-pytorch",
+                  "Username": "",
+                  "Json": "{\"jobName\":\"tutorial-pytorch\",\"resourcegpu\":1,\"workPath\":\"./\",\"dataPath\":\"imagenet\",\"jobPath\":\"\",\"image\":\"dlws/tutorial-pytorch:1.5\",\"cmd\":\"apt-get update && apt-get install -y openssh-server sudo &&  addgroup --force-badname --gid  $$gid$$ domainusers && adduser --force-badname --home /home/$$username$$ --shell /bin/bash --uid $$uid$$  -gecos '' $$username$$  --gid $$gid$$ --disabled-password  && usermod -p $(echo tryme2017 | openssl passwd -1 -stdin) $$username$$ && usermod -p $(echo tryme2017 | openssl passwd -1 -stdin) root && adduser $$username$$ sudo && echo '%sudo ALL=(ALL) NOPASSWD:ALL' >> /etc/sudoers && mkdir -p /root/.ssh && cat /work/.ssh/id_rsa.pub >> /root/.ssh/authorized_keys && ( chown -R $$username$$ /home/$$username$$/ || /bin/true ) && service ssh restart && env | while read line; do if [[ $line != HOME=* ]] && [[ $line != INTERACTIVE* ]] ; then echo \\\"export $line\\\" >> /home/$$username$$/.bashrc; fi; done &&  export HOME=/job && export LD_LIBRARY_PATH=/usr/local/nvidia/lib64/ ; runuser -p -l $$username$$ -c \\\"source /home/$$username$$/.bashrc && export PATH=/opt/conda/envs/pytorch-py35/bin/:$PATH; jupyter notebook --no-browser --port=8888 --ip=0.0.0.0 --notebook-dir=/\\\"\",\"is_interactive\":true,\"do_log\":false,\"interactivePort\":\"22, 8888, 6006\",\"runningasroot\":true,\"mountpoints\":[],\"env\":[],\"jobtrainingtype\":\"RegularJob\",\"enableworkpath\":true,\"enabledatapath\":true,\"enablejobpath\":true,\"isPrivileged\":true,\"dnsPolicy\":\"Default\",\"hostIPC\":true}",
+                  "Database": "Master"
+                  },
+                  {
+                  "Name": "tutorial-tensorflow",
+                  "Username": "",
+                  "Json": "{\"jobName\":\"tutorial-tensorflow\",\"resourcegpu\":1,\"workPath\":\"./\",\"dataPath\":\"imagenet\",\"jobPath\":\"\",\"image\":\"dlws/tutorial-tensorflow:1.5\",\"cmd\":\"apt-get update && apt-get install -y openssh-server sudo && addgroup --force-badname --gid  $$gid$$ domainusers && adduser --force-badname --home /home/$$username$$ --shell /bin/bash --uid $$uid$$  -gecos '' $$username$$  --gid $$gid$$ --disabled-password  && usermod -p $(echo tryme2017 | openssl passwd -1 -stdin) $$username$$ && adduser $$username$$ sudo && echo '%sudo ALL=(ALL) NOPASSWD:ALL' >> /etc/sudoers && ( mkdir -p /root/.ssh && cat /work/.ssh/id_rsa.pub >> /root/.ssh/authorized_keys && mkdir -p /home/$$username$$/.ssh && cat /work/.ssh/id_rsa.pub >> /home/$$username$$/.ssh/authorized_keys && cp /work/.ssh/id_rsa* /home/$$username$$/.ssh/ ;  chown -R $$username$$ /home/$$username$$/ || /bin/true )  && service ssh restart && env | while read line; do if [[ $line != HOME=* ]] && [[ $line != INTERACTIVE* ]] ; then echo \\\"export $line\\\" >> /home/$$username$$/.bashrc; fi; done &&  export HOME=/job &&  runuser -l $$username$$ -c \\\"source /home/$$username$$/.bashrc && jupyter notebook --no-browser --port=8888 --ip=0.0.0.0 --notebook-dir=/\\\"\",\"is_interactive\":true,\"do_log\":false,\"interactivePort\":\"22, 8888, 6006\",\"runningasroot\":true,\"mountpoints\":[],\"env\":[{\"name\":\"LD_LIBRARY_PATH\",\"value\":\"/usr/local/nvidia/lib64/\",\"$$hashKey\":\"object:134\"}],\"jobtrainingtype\":\"RegularJob\",\"enableworkpath\":true,\"enabledatapath\":true,\"enablejobpath\":true}",
+                  "Database": "Master"
+                  },
+                  {
+                  "Name": "tutorial-tensorflow-cpu",
+                  "Username": "",
+                  "Json": "{\"jobName\":\"tutorial-tensorflow-cpu\",\"resourcegpu\":0,\"workPath\":\"./\",\"dataPath\":\"imagenet\",\"jobPath\":\"\",\"image\":\"dlws/tutorial-tensorflow-cpu:1.5\",\"cmd\":\"apt-get update && apt-get install -y openssh-server sudo && addgroup --force-badname --gid  $$gid$$ domainusers && adduser --force-badname --home /home/$$username$$ --shell /bin/bash --uid $$uid$$  -gecos '' $$username$$  --gid $$gid$$ --disabled-password  && usermod -p $(echo tryme2017 | openssl passwd -1 -stdin) $$username$$ && adduser $$username$$ sudo && echo '%sudo ALL=(ALL) NOPASSWD:ALL' >> /etc/sudoers && ( mkdir -p /root/.ssh && cat /work/.ssh/id_rsa.pub >> /root/.ssh/authorized_keys && mkdir -p /home/$$username$$/.ssh && cat /work/.ssh/id_rsa.pub >> /home/$$username$$/.ssh/authorized_keys && cp /work/.ssh/id_rsa* /home/$$username$$/.ssh/ ;  chown -R $$username$$ /home/$$username$$/ || /bin/true )  && service ssh restart && env | while read line; do if [[ $line != HOME=* ]] && [[ $line != INTERACTIVE* ]] ; then echo \\\"export $line\\\" >> /home/$$username$$/.bashrc; fi; done &&  export HOME=/job && runuser -l $$username$$ -c \\\"jupyter notebook --no-browser --port=8888 --ip=0.0.0.0 --notebook-dir=/\\\"\",\"is_interactive\":true,\"do_log\":false,\"interactivePort\":\"22, 8888, 6006\",\"runningasroot\":true,\"mountpoints\":[],\"env\":[{\"name\":\"LD_LIBRARY_PATH\",\"value\":\"/usr/local/nvidia/lib64/\",\"$$hashKey\":\"object:134\"}],\"jobtrainingtype\":\"RegularJob\",\"enableworkpath\":true,\"enabledatapath\":true,\"enablejobpath\":true}",
+                  "Database": "Master"
+                  },
+                  {
+                  "Name": "9bf1557e-6918-48d0-a159-a74e4dd8b5f5",
+                  "Username": "v-liuhon@microsoft.com",
+                  "Json": "{\"resourcegpu\":0,\"workPath\":\".\",\"dataPath\":\".\",\"jobPath\":\"\",\"enableworkpath\":true,\"enabledatapath\":true,\"enablejobpath\":true,\"runningasroot\":\"1\",\"interactivePorts\":[],\"mountpoints\":[{\"name\":\"homefolder\",\"containerPath\":\"/home/v-liuhon\",\"hostPath\":\"/dlwsdata/work/v-liuhon\",\"description\":\"NFS (remote file share)\",\"enabled\":true,\"$$hashKey\":\"object:32\"}],\"env\":[],\"jobtrainingtype\":\"RegularJob\"}",
+                  "Database": "CurrentCluster"
+                  },
+                  {
+                  "Name": "c3caaeb7-3896-498b-bbbf-8e7fcf6079be",
+                  "Username": "v-liuhon@microsoft.com",
+                  "Json": "{\"resourcegpu\":0,\"workPath\":\".\",\"dataPath\":\".\",\"jobPath\":\"\",\"enableworkpath\":true,\"enabledatapath\":true,\"enablejobpath\":true,\"runningasroot\":\"1\",\"interactivePorts\":[],\"mountpoints\":[{\"name\":\"homefolder\",\"containerPath\":\"/home/v-liuhon\",\"hostPath\":\"/dlwsdata/work/v-liuhon\",\"description\":\"NFS (remote file share)\",\"enabled\":true,\"$$hashKey\":\"object:33\"}],\"env\":[],\"jobtrainingtype\":\"RegularJob\"}",
+                  "Database": "CurrentCluster"
+                  }
+                ] 
           
   '/GetDatabase':
     get:
@@ -4340,6 +5739,12 @@ paths:
       responses:
         200:
           description: OK
+          content:
+            application/json:
+              examples:
+                default:
+                  value:
+                    result: "Success, the command is scheduled to be run."
         400:
           description: Bad Request
           content:
@@ -4376,6 +5781,11 @@ paths:
       responses:
         200:
           description: OK
+          content:
+            application/json:
+              example:
+                [{command: "", output: null, status: "run", time: "Thu, 11 Jul 2019 17:50:14 GMT"}]
+            
         400:
           description: Bad Request
           content:
@@ -4409,6 +5819,50 @@ paths:
       responses:
         200:
           description: OK
+          content:
+            application/json:
+              examples:
+                default:
+                  value:
+                    [
+                        {
+                        "domain": "eastus.cloudapp.azure.com",
+                        "hostNetwork": false,
+                        "id": "e-b9254084-4f91-49d9-8800-f019a80b978e-ssh",
+                        "name": "ssh",
+                        "nodeName": "dltsprod-worker-glcwsl",
+                        "podName": "b9254084-4f91-49d9-8800-f019a80b978e",
+                        "podPort": 22,
+                        "port": 30395,
+                        "status": "running",
+                        "username": "nsarangi"
+                        },
+                        {
+                        "domain": "eastus.cloudapp.azure.com",
+                        "hostNetwork": false,
+                        "id": "e-b9254084-4f91-49d9-8800-f019a80b978e-ipython",
+                        "name": "ipython",
+                        "nodeName": "dltsprod-worker-glcwsl",
+                        "podName": "b9254084-4f91-49d9-8800-f019a80b978e",
+                        "podPort": 49542,
+                        "port": 31555,
+                        "status": "running",
+                        "username": "nsarangi"
+                        },
+                        {
+                        "domain": "eastus.cloudapp.azure.com",
+                        "hostNetwork": false,
+                        "id": "e-b9254084-4f91-49d9-8800-f019a80b978e-tensorboard",
+                        "name": "tensorboard",
+                        "nodeName": "dltsprod-worker-glcwsl",
+                        "podName": "b9254084-4f91-49d9-8800-f019a80b978e",
+                        "podPort": 44317,
+                        "port": 32741,
+                        "status": "running",
+                        "username": "nsarangi"
+                        }
+                        ]
+                
         400:
           description: Bad Request
           content:
@@ -4442,6 +5896,1301 @@ paths:
       responses:
         200:
           description: OK
+          content:
+            application/json:
+              examples:
+                default:
+                  value:
+                    {
+                      "AvaliableJobNum": 18,
+                      "gpu_avaliable": {
+                      "P40": 8
+                      },
+                      "gpu_capacity": {
+                      "P40": 43
+                      },
+                      "gpu_unschedulable": {
+                      "P40": 0
+                      },
+                      "gpu_used": {
+                      "P40": 35
+                      },
+                      "metadata": "{\"P40\":{\"num_gpu_per_node\":4}}",
+                      "node_status": [
+                            {
+                            "InternalIP": "192.168.0.8",
+                            "gpuType": "P40",
+                            "gpu_allocatable": {
+                            "P40": 4
+                            },
+                            "gpu_capacity": {
+                            "P40": 4
+                            },
+                            "gpu_used": {
+                            "P40": 4
+                            },
+                            "labels": {
+                            "FragmentGPUJob": "active",
+                            "all": "active",
+                            "beta.kubernetes.io/arch": "amd64",
+                            "beta.kubernetes.io/os": "linux",
+                            "cloud-collectd-node-agent": "active",
+                            "cloud-fluentd-es-config-v0.1.0": "active",
+                            "cloud-fluentd-es-v2.0.2": "active",
+                            "collectd-node-agent": "active",
+                            "datanode": "active",
+                            "default": "active",
+                            "detectron": "active",
+                            "dlws-grafana": "active",
+                            "elasticsearch-logging": "active",
+                            "fluentd-es-config-v0.1.0": "active",
+                            "fluentd-es-v2.0.2": "active",
+                            "freeflowrouter": "active",
+                            "glusterfs": "active",
+                            "google-cadvisor": "active",
+                            "gpuType": "P40",
+                            "hdfs": "active",
+                            "hdfsdatanode": "active",
+                            "hdfsformat": "active",
+                            "hdfsjournal": "active",
+                            "hdfsnn1": "active",
+                            "hdfsnn2": "active",
+                            "hdfsstandby": "active",
+                            "kubernetes.io/hostname": "dltsprod-worker-myfati",
+                            "nginx": "active",
+                            "nvidia-device-plugin-daemonset": "active",
+                            "nvidiaheartbeat": "active",
+                            "recogserver": "active",
+                            "sparknode": "active",
+                            "worker": "active",
+                            "yarnnodemanager": "active",
+                            "yarnrm1": "active",
+                            "yarnrm2": "active",
+                            "zk": "active",
+                            "zk-config": "active",
+                            "zk-headless": "active"
+                            },
+                            "name": "dltsprod-worker-myfati",
+                            "pods": [
+                            "692edae5-845e-4e18-bcdb-da48f6b2f2c8 : euka (gpu usage:0%)!!!!!! (gpu #:1)",
+                            "a09cc90b-3ca6-4bd0-8f01-a2fbb1e3fa01 : v-liuhon (gpu usage:0%)!!!!!! (gpu #:1)",
+                            "a846abc1-44fc-4993-9977-dbc443096271 : lexion (gpu usage:0%)!!!!!! (gpu #:1)",
+                            "d5ec11b3-9e21-46d8-ab82-721ac7d40f3c : t-qiz (gpu usage:0%)!!!!!! (gpu #:1)"
+                            ],
+                            "scheduled_service": [
+                            "nvidiaheartbeat",
+                            "cloud-fluentd-es-v2.0.2",
+                            "zk",
+                            "hdfsjournal",
+                            "glusterfs",
+                            "hdfsstandby",
+                            "yarnnodemanager",
+                            "fluentd-es-v2.0.2",
+                            "hdfs",
+                            "nvidia-device-plugin-daemonset",
+                            "cloud-fluentd-es-config-v0.1.0",
+                            "hdfsnn1",
+                            "hdfsnn2",
+                            "datanode",
+                            "recogserver",
+                            "elasticsearch-logging",
+                            "fluentd-es-config-v0.1.0",
+                            "sparknode",
+                            "collectd-node-agent",
+                            "hdfsformat",
+                            "zk-headless",
+                            "zk-config",
+                            "worker",
+                            "dlws-grafana",
+                            "detectron",
+                            "nginx",
+                            "FragmentGPUJob",
+                            "freeflowrouter",
+                            "yarnrm1",
+                            "yarnrm2",
+                            "hdfsdatanode",
+                            "google-cadvisor",
+                            "P40",
+                            "cloud-collectd-node-agent"
+                            ],
+                            "unschedulable": false
+                            },
+                            {
+                            "InternalIP": "192.168.255.1",
+                            "gpuType": "",
+                            "gpu_allocatable": {},
+                            "gpu_capacity": {},
+                            "gpu_used": {
+                            "": 0
+                            },
+                            "labels": {
+                            "FragmentGPUJob": "active",
+                            "all": "active",
+                            "beta.kubernetes.io/arch": "amd64",
+                            "beta.kubernetes.io/os": "linux",
+                            "cloud-collectd-node-agent": "active",
+                            "cloud-fluentd-es-config-v0.1.0": "active",
+                            "cloud-fluentd-es-v2.0.2": "active",
+                            "collectd-node-agent": "active",
+                            "datanode": "active",
+                            "default": "active",
+                            "detectron": "active",
+                            "dlws-grafana": "active",
+                            "elasticsearch": "active",
+                            "elasticsearch-logging": "active",
+                            "fluentd-es-config-v0.1.0": "active",
+                            "fluentd-es-v2.0.2": "active",
+                            "freeflowrouter": "active",
+                            "google-cadvisor": "active",
+                            "grafana": "active",
+                            "hdfsdatanode": "active",
+                            "hdfsformat": "active",
+                            "hdfsjournal": "active",
+                            "hdfsnn1": "active",
+                            "hdfsnn2": "active",
+                            "hdfsstandby": "active",
+                            "influxdb": "active",
+                            "infrastructure": "active",
+                            "jobmanager": "active",
+                            "journalnode": "active",
+                            "kibana": "active",
+                            "kubernetes.io/hostname": "dltsprod-infra01",
+                            "mysql": "active",
+                            "namenode1": "active",
+                            "nginx": "active",
+                            "nvidia-device-plugin-daemonset": "active",
+                            "nvidiaheartbeat": "active",
+                            "phpmyadmin": "active",
+                            "prometheus": "active",
+                            "recogserver": "active",
+                            "restfulapi": "active",
+                            "sparknode": "active",
+                            "watchdog": "active",
+                            "webportal": "active",
+                            "yarnnodemanager": "active",
+                            "yarnrm1": "active",
+                            "yarnrm2": "active",
+                            "zk": "active",
+                            "zk-config": "active",
+                            "zk-headless": "active",
+                            "zookeeper": "active"
+                            },
+                            "name": "dltsprod-infra01",
+                            "pods": [
+                            "jobmanager-nwtpw (gpu #:0)",
+                            "restfulapi-hg5xk (gpu #:0)",
+                            "webportal-tjqjr (gpu #:0)"
+                            ],
+                            "scheduled_service": [
+                            "phpmyadmin",
+                            "nvidiaheartbeat",
+                            "cloud-fluentd-es-v2.0.2",
+                            "zk",
+                            "hdfsjournal",
+                            "fluentd-es-v2.0.2",
+                            "kibana",
+                            "hdfsstandby",
+                            "yarnnodemanager",
+                            "mysql",
+                            "watchdog",
+                            "webportal",
+                            "nvidia-device-plugin-daemonset",
+                            "cloud-fluentd-es-config-v0.1.0",
+                            "grafana",
+                            "hdfsnn1",
+                            "hdfsnn2",
+                            "datanode",
+                            "recogserver",
+                            "elasticsearch",
+                            "fluentd-es-config-v0.1.0",
+                            "sparknode",
+                            "collectd-node-agent",
+                            "hdfsformat",
+                            "infrastructure",
+                            "journalnode",
+                            "zk-headless",
+                            "zk-config",
+                            "namenode1",
+                            "dlws-grafana",
+                            "influxdb",
+                            "detectron",
+                            "nginx",
+                            "prometheus",
+                            "restfulapi",
+                            "FragmentGPUJob",
+                            "freeflowrouter",
+                            "zookeeper",
+                            "jobmanager",
+                            "yarnrm1",
+                            "yarnrm2",
+                            "hdfsdatanode",
+                            "elasticsearch-logging",
+                            "google-cadvisor",
+                            "cloud-collectd-node-agent"
+                            ],
+                            "unschedulable": false
+                            },
+                            {
+                            "InternalIP": "192.168.0.11",
+                            "gpuType": "P40",
+                            "gpu_allocatable": {
+                            "P40": 4
+                            },
+                            "gpu_capacity": {
+                            "P40": 4
+                            },
+                            "gpu_used": {
+                            "P40": 4
+                            },
+                            "labels": {
+                            "FragmentGPUJob": "active",
+                            "all": "active",
+                            "beta.kubernetes.io/arch": "amd64",
+                            "beta.kubernetes.io/os": "linux",
+                            "cloud-collectd-node-agent": "active",
+                            "cloud-fluentd-es-config-v0.1.0": "active",
+                            "cloud-fluentd-es-v2.0.2": "active",
+                            "collectd-node-agent": "active",
+                            "datanode": "active",
+                            "default": "active",
+                            "detectron": "active",
+                            "dlws-grafana": "active",
+                            "elasticsearch-logging": "active",
+                            "fluentd-es-config-v0.1.0": "active",
+                            "fluentd-es-v2.0.2": "active",
+                            "freeflowrouter": "active",
+                            "glusterfs": "active",
+                            "google-cadvisor": "active",
+                            "gpuType": "P40",
+                            "hdfs": "active",
+                            "hdfsdatanode": "active",
+                            "hdfsformat": "active",
+                            "hdfsjournal": "active",
+                            "hdfsnn1": "active",
+                            "hdfsnn2": "active",
+                            "hdfsstandby": "active",
+                            "kubernetes.io/hostname": "dltsprod-worker-rsagxh",
+                            "nginx": "active",
+                            "nvidia-device-plugin-daemonset": "active",
+                            "nvidiaheartbeat": "active",
+                            "recogserver": "active",
+                            "sparknode": "active",
+                            "worker": "active",
+                            "yarnnodemanager": "active",
+                            "yarnrm1": "active",
+                            "yarnrm2": "active",
+                            "zk": "active",
+                            "zk-config": "active",
+                            "zk-headless": "active"
+                            },
+                            "name": "dltsprod-worker-rsagxh",
+                            "pods": [
+                            "3a2fe684-b912-4c85-8fdc-381b4e5224c2 : lewisliu (gpu usage:0%)!!!!!! (gpu #:1)",
+                            "d5aea2e7-5d28-43bd-b301-d27489b04175 : joelpf (gpu usage:0%)!!!!!! (gpu #:2)",
+                            "fd176d57-d6c1-404b-ae43-6e2cfa5c5789 : jukim (gpu usage:0%)!!!!!! (gpu #:1)"
+                            ],
+                            "scheduled_service": [
+                            "nvidiaheartbeat",
+                            "cloud-fluentd-es-v2.0.2",
+                            "zk",
+                            "hdfsjournal",
+                            "glusterfs",
+                            "hdfsstandby",
+                            "yarnnodemanager",
+                            "fluentd-es-v2.0.2",
+                            "hdfs",
+                            "nvidia-device-plugin-daemonset",
+                            "cloud-fluentd-es-config-v0.1.0",
+                            "hdfsnn1",
+                            "hdfsnn2",
+                            "datanode",
+                            "recogserver",
+                            "elasticsearch-logging",
+                            "fluentd-es-config-v0.1.0",
+                            "sparknode",
+                            "collectd-node-agent",
+                            "hdfsformat",
+                            "zk-headless",
+                            "zk-config",
+                            "worker",
+                            "dlws-grafana",
+                            "detectron",
+                            "nginx",
+                            "FragmentGPUJob",
+                            "freeflowrouter",
+                            "yarnrm1",
+                            "yarnrm2",
+                            "hdfsdatanode",
+                            "google-cadvisor",
+                            "P40",
+                            "cloud-collectd-node-agent"
+                            ],
+                            "unschedulable": false
+                            },
+                            {
+                            "InternalIP": "192.168.0.6",
+                            "gpuType": "P40",
+                            "gpu_allocatable": {
+                            "P40": 4
+                            },
+                            "gpu_capacity": {
+                            "P40": 4
+                            },
+                            "gpu_used": {},
+                            "labels": {
+                            "FragmentGPUJob": "active",
+                            "all": "active",
+                            "beta.kubernetes.io/arch": "amd64",
+                            "beta.kubernetes.io/os": "linux",
+                            "cloud-collectd-node-agent": "active",
+                            "cloud-fluentd-es-config-v0.1.0": "active",
+                            "cloud-fluentd-es-v2.0.2": "active",
+                            "collectd-node-agent": "active",
+                            "datanode": "active",
+                            "default": "active",
+                            "detectron": "active",
+                            "dlws-grafana": "active",
+                            "elasticsearch-logging": "active",
+                            "fluentd-es-config-v0.1.0": "active",
+                            "fluentd-es-v2.0.2": "active",
+                            "freeflowrouter": "active",
+                            "glusterfs": "active",
+                            "google-cadvisor": "active",
+                            "gpuType": "P40",
+                            "hdfs": "active",
+                            "hdfsdatanode": "active",
+                            "hdfsformat": "active",
+                            "hdfsjournal": "active",
+                            "hdfsnn1": "active",
+                            "hdfsnn2": "active",
+                            "hdfsstandby": "active",
+                            "kubernetes.io/hostname": "dltsprod-worker-ivnllv",
+                            "nginx": "active",
+                            "nvidia-device-plugin-daemonset": "active",
+                            "nvidiaheartbeat": "active",
+                            "recogserver": "active",
+                            "sparknode": "active",
+                            "worker": "active",
+                            "yarnnodemanager": "active",
+                            "yarnrm1": "active",
+                            "yarnrm2": "active",
+                            "zk": "active",
+                            "zk-config": "active",
+                            "zk-headless": "active"
+                            },
+                            "name": "dltsprod-worker-ivnllv",
+                            "pods": [],
+                            "scheduled_service": [
+                            "nvidiaheartbeat",
+                            "cloud-fluentd-es-v2.0.2",
+                            "zk",
+                            "hdfsjournal",
+                            "glusterfs",
+                            "hdfsstandby",
+                            "yarnnodemanager",
+                            "fluentd-es-v2.0.2",
+                            "hdfs",
+                            "nvidia-device-plugin-daemonset",
+                            "cloud-fluentd-es-config-v0.1.0",
+                            "hdfsnn1",
+                            "hdfsnn2",
+                            "datanode",
+                            "recogserver",
+                            "elasticsearch-logging",
+                            "fluentd-es-config-v0.1.0",
+                            "sparknode",
+                            "collectd-node-agent",
+                            "hdfsformat",
+                            "zk-headless",
+                            "zk-config",
+                            "worker",
+                            "dlws-grafana",
+                            "detectron",
+                            "nginx",
+                            "FragmentGPUJob",
+                            "freeflowrouter",
+                            "yarnrm1",
+                            "yarnrm2",
+                            "hdfsdatanode",
+                            "google-cadvisor",
+                            "P40",
+                            "cloud-collectd-node-agent"
+                            ],
+                            "unschedulable": false
+                            },
+                            {
+                            "InternalIP": "192.168.0.19",
+                            "gpuType": "P40",
+                            "gpu_allocatable": {
+                            "P40": 4
+                            },
+                            "gpu_capacity": {
+                            "P40": 4
+                            },
+                            "gpu_used": {
+                            "P40": 4
+                            },
+                            "labels": {
+                            "FragmentGPUJob": "active",
+                            "all": "active",
+                            "beta.kubernetes.io/arch": "amd64",
+                            "beta.kubernetes.io/os": "linux",
+                            "cloud-collectd-node-agent": "active",
+                            "cloud-fluentd-es-config-v0.1.0": "active",
+                            "cloud-fluentd-es-v2.0.2": "active",
+                            "collectd-node-agent": "active",
+                            "datanode": "active",
+                            "default": "active",
+                            "detectron": "active",
+                            "dlws-grafana": "active",
+                            "elasticsearch-logging": "active",
+                            "fluentd-es-config-v0.1.0": "active",
+                            "fluentd-es-v2.0.2": "active",
+                            "freeflowrouter": "active",
+                            "glusterfs": "active",
+                            "google-cadvisor": "active",
+                            "gpuType": "P40",
+                            "hdfs": "active",
+                            "hdfsdatanode": "active",
+                            "hdfsformat": "active",
+                            "hdfsjournal": "active",
+                            "hdfsnn1": "active",
+                            "hdfsnn2": "active",
+                            "hdfsstandby": "active",
+                            "kubernetes.io/hostname": "dltsprod-worker-enociv",
+                            "nginx": "active",
+                            "nvidia-device-plugin-daemonset": "active",
+                            "nvidiaheartbeat": "active",
+                            "recogserver": "active",
+                            "sparknode": "active",
+                            "worker": "active",
+                            "yarnnodemanager": "active",
+                            "yarnrm1": "active",
+                            "yarnrm2": "active",
+                            "zk": "active",
+                            "zk-config": "active",
+                            "zk-headless": "active"
+                            },
+                            "name": "dltsprod-worker-enociv",
+                            "pods": [
+                            "747af769-08cc-456d-ab45-3516d92527b7 : anbhu (gpu #:0)",
+                            "ed42fd0b-7ef8-46bb-a6e7-07471b1cdada-worker0 : t-imschl (gpu usage:0%)!!!!!! (gpu #:4)"
+                            ],
+                            "scheduled_service": [
+                            "nvidiaheartbeat",
+                            "cloud-fluentd-es-v2.0.2",
+                            "zk",
+                            "hdfsjournal",
+                            "glusterfs",
+                            "hdfsstandby",
+                            "yarnnodemanager",
+                            "fluentd-es-v2.0.2",
+                            "hdfs",
+                            "nvidia-device-plugin-daemonset",
+                            "cloud-fluentd-es-config-v0.1.0",
+                            "hdfsnn1",
+                            "hdfsnn2",
+                            "datanode",
+                            "recogserver",
+                            "elasticsearch-logging",
+                            "fluentd-es-config-v0.1.0",
+                            "sparknode",
+                            "collectd-node-agent",
+                            "hdfsformat",
+                            "zk-headless",
+                            "zk-config",
+                            "worker",
+                            "dlws-grafana",
+                            "detectron",
+                            "nginx",
+                            "FragmentGPUJob",
+                            "freeflowrouter",
+                            "yarnrm1",
+                            "yarnrm2",
+                            "hdfsdatanode",
+                            "google-cadvisor",
+                            "P40",
+                            "cloud-collectd-node-agent"
+                            ],
+                            "unschedulable": false
+                            },
+                            {
+                            "InternalIP": "192.168.0.15",
+                            "gpuType": "P40",
+                            "gpu_allocatable": {
+                            "P40": 4
+                            },
+                            "gpu_capacity": {
+                            "P40": 4
+                            },
+                            "gpu_used": {
+                            "P40": 4
+                            },
+                            "labels": {
+                            "FragmentGPUJob": "active",
+                            "all": "active",
+                            "beta.kubernetes.io/arch": "amd64",
+                            "beta.kubernetes.io/os": "linux",
+                            "cloud-collectd-node-agent": "active",
+                            "cloud-fluentd-es-config-v0.1.0": "active",
+                            "cloud-fluentd-es-v2.0.2": "active",
+                            "collectd-node-agent": "active",
+                            "datanode": "active",
+                            "default": "active",
+                            "detectron": "active",
+                            "dlws-grafana": "active",
+                            "elasticsearch-logging": "active",
+                            "fluentd-es-config-v0.1.0": "active",
+                            "fluentd-es-v2.0.2": "active",
+                            "freeflowrouter": "active",
+                            "glusterfs": "active",
+                            "google-cadvisor": "active",
+                            "gpuType": "P40",
+                            "hdfs": "active",
+                            "hdfsdatanode": "active",
+                            "hdfsformat": "active",
+                            "hdfsjournal": "active",
+                            "hdfsnn1": "active",
+                            "hdfsnn2": "active",
+                            "hdfsstandby": "active",
+                            "kubernetes.io/hostname": "dltsprod-worker-cnrqrv",
+                            "nginx": "active",
+                            "nvidia-device-plugin-daemonset": "active",
+                            "nvidiaheartbeat": "active",
+                            "recogserver": "active",
+                            "sparknode": "active",
+                            "worker": "active",
+                            "yarnnodemanager": "active",
+                            "yarnrm1": "active",
+                            "yarnrm2": "active",
+                            "zk": "active",
+                            "zk-config": "active",
+                            "zk-headless": "active"
+                            },
+                            "name": "dltsprod-worker-cnrqrv",
+                            "pods": [
+                            "c905178f-36b8-403d-8742-47e7fe357411-worker0 : xuewa (gpu usage:0%)!!!!!! (gpu #:4)"
+                            ],
+                            "scheduled_service": [
+                            "nvidiaheartbeat",
+                            "cloud-fluentd-es-v2.0.2",
+                            "zk",
+                            "hdfsjournal",
+                            "glusterfs",
+                            "hdfsstandby",
+                            "yarnnodemanager",
+                            "fluentd-es-v2.0.2",
+                            "hdfs",
+                            "nvidia-device-plugin-daemonset",
+                            "cloud-fluentd-es-config-v0.1.0",
+                            "hdfsnn1",
+                            "hdfsnn2",
+                            "datanode",
+                            "recogserver",
+                            "elasticsearch-logging",
+                            "fluentd-es-config-v0.1.0",
+                            "sparknode",
+                            "collectd-node-agent",
+                            "hdfsformat",
+                            "zk-headless",
+                            "zk-config",
+                            "worker",
+                            "dlws-grafana",
+                            "detectron",
+                            "nginx",
+                            "FragmentGPUJob",
+                            "freeflowrouter",
+                            "yarnrm1",
+                            "yarnrm2",
+                            "hdfsdatanode",
+                            "google-cadvisor",
+                            "P40",
+                            "cloud-collectd-node-agent"
+                            ],
+                            "unschedulable": false
+                            },
+                            {
+                            "InternalIP": "192.168.0.23",
+                            "gpuType": "P40",
+                            "gpu_allocatable": {
+                            "P40": 4
+                            },
+                            "gpu_capacity": {
+                            "P40": 4
+                            },
+                            "gpu_used": {
+                            "P40": 4
+                            },
+                            "labels": {
+                            "FragmentGPUJob": "active",
+                            "all": "active",
+                            "beta.kubernetes.io/arch": "amd64",
+                            "beta.kubernetes.io/os": "linux",
+                            "cloud-collectd-node-agent": "active",
+                            "cloud-fluentd-es-config-v0.1.0": "active",
+                            "cloud-fluentd-es-v2.0.2": "active",
+                            "collectd-node-agent": "active",
+                            "datanode": "active",
+                            "default": "active",
+                            "detectron": "active",
+                            "dlws-grafana": "active",
+                            "elasticsearch-logging": "active",
+                            "fluentd-es-config-v0.1.0": "active",
+                            "fluentd-es-v2.0.2": "active",
+                            "freeflowrouter": "active",
+                            "glusterfs": "active",
+                            "google-cadvisor": "active",
+                            "gpuType": "P40",
+                            "hdfs": "active",
+                            "hdfsdatanode": "active",
+                            "hdfsformat": "active",
+                            "hdfsjournal": "active",
+                            "hdfsnn1": "active",
+                            "hdfsnn2": "active",
+                            "hdfsstandby": "active",
+                            "kubernetes.io/hostname": "dltsprod-worker-aembay",
+                            "nginx": "active",
+                            "nvidia-device-plugin-daemonset": "active",
+                            "nvidiaheartbeat": "active",
+                            "recogserver": "active",
+                            "sparknode": "active",
+                            "worker": "active",
+                            "yarnnodemanager": "active",
+                            "yarnrm1": "active",
+                            "yarnrm2": "active",
+                            "zk": "active",
+                            "zk-config": "active",
+                            "zk-headless": "active"
+                            },
+                            "name": "dltsprod-worker-aembay",
+                            "pods": [
+                            "aab83fc5-72a3-4877-afab-d39b7ea80b4c : joelpf (gpu usage:0%)!!!!!! (gpu #:4)"
+                            ],
+                            "scheduled_service": [
+                            "nvidiaheartbeat",
+                            "cloud-fluentd-es-v2.0.2",
+                            "zk",
+                            "hdfsjournal",
+                            "glusterfs",
+                            "hdfsstandby",
+                            "yarnnodemanager",
+                            "fluentd-es-v2.0.2",
+                            "hdfs",
+                            "nvidia-device-plugin-daemonset",
+                            "cloud-fluentd-es-config-v0.1.0",
+                            "hdfsnn1",
+                            "hdfsnn2",
+                            "datanode",
+                            "recogserver",
+                            "elasticsearch-logging",
+                            "fluentd-es-config-v0.1.0",
+                            "sparknode",
+                            "collectd-node-agent",
+                            "hdfsformat",
+                            "zk-headless",
+                            "zk-config",
+                            "worker",
+                            "dlws-grafana",
+                            "detectron",
+                            "nginx",
+                            "FragmentGPUJob",
+                            "freeflowrouter",
+                            "yarnrm1",
+                            "yarnrm2",
+                            "hdfsdatanode",
+                            "google-cadvisor",
+                            "P40",
+                            "cloud-collectd-node-agent"
+                            ],
+                            "unschedulable": false
+                            },
+                            {
+                            "InternalIP": "192.168.0.17",
+                            "gpuType": "P40",
+                            "gpu_allocatable": {
+                            "P40": 3
+                            },
+                            "gpu_capacity": {
+                            "P40": 3
+                            },
+                            "gpu_used": {
+                            "P40": 2
+                            },
+                            "labels": {
+                            "FragmentGPUJob": "active",
+                            "all": "active",
+                            "beta.kubernetes.io/arch": "amd64",
+                            "beta.kubernetes.io/os": "linux",
+                            "cloud-collectd-node-agent": "active",
+                            "cloud-fluentd-es-config-v0.1.0": "active",
+                            "cloud-fluentd-es-v2.0.2": "active",
+                            "collectd-node-agent": "active",
+                            "datanode": "active",
+                            "default": "active",
+                            "detectron": "active",
+                            "dlws-grafana": "active",
+                            "elasticsearch-logging": "active",
+                            "fluentd-es-config-v0.1.0": "active",
+                            "fluentd-es-v2.0.2": "active",
+                            "freeflowrouter": "active",
+                            "glusterfs": "active",
+                            "google-cadvisor": "active",
+                            "gpuType": "P40",
+                            "hdfs": "active",
+                            "hdfsdatanode": "active",
+                            "hdfsformat": "active",
+                            "hdfsjournal": "active",
+                            "hdfsnn1": "active",
+                            "hdfsnn2": "active",
+                            "hdfsstandby": "active",
+                            "kubernetes.io/hostname": "dltsprod-worker-xrhdbb",
+                            "nginx": "active",
+                            "nvidia-device-plugin-daemonset": "active",
+                            "nvidiaheartbeat": "active",
+                            "recogserver": "active",
+                            "sparknode": "active",
+                            "worker": "active",
+                            "yarnnodemanager": "active",
+                            "yarnrm1": "active",
+                            "yarnrm2": "active",
+                            "zk": "active",
+                            "zk-config": "active",
+                            "zk-headless": "active"
+                            },
+                            "name": "dltsprod-worker-xrhdbb",
+                            "pods": [
+                            "75d09123-66ee-4fe6-b73b-0b65656ec2c2 : owmohamm (gpu usage:0%)!!!!!! (gpu #:2)",
+                            "c905178f-36b8-403d-8742-47e7fe357411-ps0 : xuewa (gpu #:0)"
+                            ],
+                            "scheduled_service": [
+                            "nvidiaheartbeat",
+                            "cloud-fluentd-es-v2.0.2",
+                            "zk",
+                            "hdfsjournal",
+                            "glusterfs",
+                            "hdfsstandby",
+                            "yarnnodemanager",
+                            "fluentd-es-v2.0.2",
+                            "hdfs",
+                            "nvidia-device-plugin-daemonset",
+                            "cloud-fluentd-es-config-v0.1.0",
+                            "hdfsnn1",
+                            "hdfsnn2",
+                            "datanode",
+                            "recogserver",
+                            "elasticsearch-logging",
+                            "fluentd-es-config-v0.1.0",
+                            "sparknode",
+                            "collectd-node-agent",
+                            "hdfsformat",
+                            "zk-headless",
+                            "zk-config",
+                            "worker",
+                            "dlws-grafana",
+                            "detectron",
+                            "nginx",
+                            "FragmentGPUJob",
+                            "freeflowrouter",
+                            "yarnrm1",
+                            "yarnrm2",
+                            "hdfsdatanode",
+                            "google-cadvisor",
+                            "P40",
+                            "cloud-collectd-node-agent"
+                            ],
+                            "unschedulable": false
+                            },
+                            {
+                            "InternalIP": "192.168.0.14",
+                            "gpuType": "P40",
+                            "gpu_allocatable": {
+                            "P40": 4
+                            },
+                            "gpu_capacity": {
+                            "P40": 4
+                            },
+                            "gpu_used": {
+                            "P40": 2
+                            },
+                            "labels": {
+                            "FragmentGPUJob": "active",
+                            "all": "active",
+                            "beta.kubernetes.io/arch": "amd64",
+                            "beta.kubernetes.io/os": "linux",
+                            "cloud-collectd-node-agent": "active",
+                            "cloud-fluentd-es-config-v0.1.0": "active",
+                            "cloud-fluentd-es-v2.0.2": "active",
+                            "collectd-node-agent": "active",
+                            "datanode": "active",
+                            "default": "active",
+                            "detectron": "active",
+                            "dlws-grafana": "active",
+                            "elasticsearch-logging": "active",
+                            "fluentd-es-config-v0.1.0": "active",
+                            "fluentd-es-v2.0.2": "active",
+                            "freeflowrouter": "active",
+                            "glusterfs": "active",
+                            "google-cadvisor": "active",
+                            "gpuType": "P40",
+                            "hdfs": "active",
+                            "hdfsdatanode": "active",
+                            "hdfsformat": "active",
+                            "hdfsjournal": "active",
+                            "hdfsnn1": "active",
+                            "hdfsnn2": "active",
+                            "hdfsstandby": "active",
+                            "kubernetes.io/hostname": "dltsprod-worker-xyrmje",
+                            "nginx": "active",
+                            "nvidia-device-plugin-daemonset": "active",
+                            "nvidiaheartbeat": "active",
+                            "recogserver": "active",
+                            "sparknode": "active",
+                            "worker": "active",
+                            "yarnnodemanager": "active",
+                            "yarnrm1": "active",
+                            "yarnrm2": "active",
+                            "zk": "active",
+                            "zk-config": "active",
+                            "zk-headless": "active"
+                            },
+                            "name": "dltsprod-worker-xyrmje",
+                            "pods": [
+                            "5292830b-a34f-468f-bf32-13655a5801ba : zeh (gpu usage:0%)!!!!!! (gpu #:1)",
+                            "bfa80d43-213c-40c9-8372-eccc94951e1a : kafilali (gpu usage:63%) (gpu #:1)",
+                            "phpmyadmin (gpu #:0)",
+                            "prometheus-operator-b96f867cd-f5xnx (gpu #:0)"
+                            ],
+                            "scheduled_service": [
+                            "nvidiaheartbeat",
+                            "cloud-fluentd-es-v2.0.2",
+                            "zk",
+                            "hdfsjournal",
+                            "glusterfs",
+                            "hdfsstandby",
+                            "yarnnodemanager",
+                            "fluentd-es-v2.0.2",
+                            "hdfs",
+                            "nvidia-device-plugin-daemonset",
+                            "cloud-fluentd-es-config-v0.1.0",
+                            "hdfsnn1",
+                            "hdfsnn2",
+                            "datanode",
+                            "recogserver",
+                            "elasticsearch-logging",
+                            "fluentd-es-config-v0.1.0",
+                            "sparknode",
+                            "collectd-node-agent",
+                            "hdfsformat",
+                            "zk-headless",
+                            "zk-config",
+                            "worker",
+                            "dlws-grafana",
+                            "detectron",
+                            "nginx",
+                            "FragmentGPUJob",
+                            "freeflowrouter",
+                            "yarnrm1",
+                            "yarnrm2",
+                            "hdfsdatanode",
+                            "google-cadvisor",
+                            "P40",
+                            "cloud-collectd-node-agent"
+                            ],
+                            "unschedulable": false
+                            },
+                            {
+                            "InternalIP": "192.168.0.7",
+                            "gpuType": "P40",
+                            "gpu_allocatable": {
+                            "P40": 4
+                            },
+                            "gpu_capacity": {
+                            "P40": 4
+                            },
+                            "gpu_used": {
+                            "P40": 4
+                            },
+                            "labels": {
+                            "FragmentGPUJob": "active",
+                            "all": "active",
+                            "beta.kubernetes.io/arch": "amd64",
+                            "beta.kubernetes.io/os": "linux",
+                            "cloud-collectd-node-agent": "active",
+                            "cloud-fluentd-es-config-v0.1.0": "active",
+                            "cloud-fluentd-es-v2.0.2": "active",
+                            "collectd-node-agent": "active",
+                            "datanode": "active",
+                            "default": "active",
+                            "detectron": "active",
+                            "dlws-grafana": "active",
+                            "elasticsearch-logging": "active",
+                            "fluentd-es-config-v0.1.0": "active",
+                            "fluentd-es-v2.0.2": "active",
+                            "freeflowrouter": "active",
+                            "glusterfs": "active",
+                            "google-cadvisor": "active",
+                            "gpuType": "P40",
+                            "hdfs": "active",
+                            "hdfsdatanode": "active",
+                            "hdfsformat": "active",
+                            "hdfsjournal": "active",
+                            "hdfsnn1": "active",
+                            "hdfsnn2": "active",
+                            "hdfsstandby": "active",
+                            "kubernetes.io/hostname": "dltsprod-worker-glcwsl",
+                            "nginx": "active",
+                            "nvidia-device-plugin-daemonset": "active",
+                            "nvidiaheartbeat": "active",
+                            "recogserver": "active",
+                            "sparknode": "active",
+                            "worker": "active",
+                            "yarnnodemanager": "active",
+                            "yarnrm1": "active",
+                            "yarnrm2": "active",
+                            "zk": "active",
+                            "zk-config": "active",
+                            "zk-headless": "active"
+                            },
+                            "name": "dltsprod-worker-glcwsl",
+                            "pods": [
+                            "411737ae-9c59-407a-ae72-0eca139cc937 : qixcheng (gpu usage:0%)!!!!!! (gpu #:1)",
+                            "7bcacad6-655d-45ec-b86f-0a122703dd2c : t-anyi (gpu usage:0%)!!!!!! (gpu #:1)",
+                            "b9254084-4f91-49d9-8800-f019a80b978e : nsarangi (gpu usage:0%)!!!!!! (gpu #:2)"
+                            ],
+                            "scheduled_service": [
+                            "nvidiaheartbeat",
+                            "cloud-fluentd-es-v2.0.2",
+                            "zk",
+                            "hdfsjournal",
+                            "glusterfs",
+                            "hdfsstandby",
+                            "yarnnodemanager",
+                            "fluentd-es-v2.0.2",
+                            "hdfs",
+                            "nvidia-device-plugin-daemonset",
+                            "cloud-fluentd-es-config-v0.1.0",
+                            "hdfsnn1",
+                            "hdfsnn2",
+                            "datanode",
+                            "recogserver",
+                            "elasticsearch-logging",
+                            "fluentd-es-config-v0.1.0",
+                            "sparknode",
+                            "collectd-node-agent",
+                            "hdfsformat",
+                            "zk-headless",
+                            "zk-config",
+                            "worker",
+                            "dlws-grafana",
+                            "detectron",
+                            "nginx",
+                            "FragmentGPUJob",
+                            "freeflowrouter",
+                            "yarnrm1",
+                            "yarnrm2",
+                            "hdfsdatanode",
+                            "google-cadvisor",
+                            "P40",
+                            "cloud-collectd-node-agent"
+                            ],
+                            "unschedulable": false
+                            },
+                            {
+                            "InternalIP": "192.168.0.5",
+                            "gpuType": "P40",
+                            "gpu_allocatable": {
+                            "P40": 4
+                            },
+                            "gpu_capacity": {
+                            "P40": 4
+                            },
+                            "gpu_used": {
+                            "P40": 4
+                            },
+                            "labels": {
+                            "FragmentGPUJob": "active",
+                            "all": "active",
+                            "beta.kubernetes.io/arch": "amd64",
+                            "beta.kubernetes.io/os": "linux",
+                            "cloud-collectd-node-agent": "active",
+                            "cloud-fluentd-es-config-v0.1.0": "active",
+                            "cloud-fluentd-es-v2.0.2": "active",
+                            "collectd-node-agent": "active",
+                            "datanode": "active",
+                            "default": "active",
+                            "detectron": "active",
+                            "dlws-grafana": "active",
+                            "elasticsearch-logging": "active",
+                            "fluentd-es-config-v0.1.0": "active",
+                            "fluentd-es-v2.0.2": "active",
+                            "freeflowrouter": "active",
+                            "glusterfs": "active",
+                            "google-cadvisor": "active",
+                            "gpuType": "P40",
+                            "hdfs": "active",
+                            "hdfsdatanode": "active",
+                            "hdfsformat": "active",
+                            "hdfsjournal": "active",
+                            "hdfsnn1": "active",
+                            "hdfsnn2": "active",
+                            "hdfsstandby": "active",
+                            "kubernetes.io/hostname": "dltsprod-worker-cpcniv",
+                            "nginx": "active",
+                            "nvidia-device-plugin-daemonset": "active",
+                            "nvidiaheartbeat": "active",
+                            "recogserver": "active",
+                            "sparknode": "active",
+                            "worker": "active",
+                            "yarnnodemanager": "active",
+                            "yarnrm1": "active",
+                            "yarnrm2": "active",
+                            "zk": "active",
+                            "zk-config": "active",
+                            "zk-headless": "active"
+                            },
+                            "name": "dltsprod-worker-cpcniv",
+                            "pods": [
+                            "c905178f-36b8-403d-8742-47e7fe357411-worker1 : xuewa (gpu usage:0%)!!!!!! (gpu #:4)"
+                            ],
+                            "scheduled_service": [
+                            "nvidiaheartbeat",
+                            "cloud-fluentd-es-v2.0.2",
+                            "zk",
+                            "hdfsjournal",
+                            "glusterfs",
+                            "hdfsstandby",
+                            "yarnnodemanager",
+                            "fluentd-es-v2.0.2",
+                            "hdfs",
+                            "nvidia-device-plugin-daemonset",
+                            "cloud-fluentd-es-config-v0.1.0",
+                            "hdfsnn1",
+                            "hdfsnn2",
+                            "datanode",
+                            "recogserver",
+                            "elasticsearch-logging",
+                            "fluentd-es-config-v0.1.0",
+                            "sparknode",
+                            "collectd-node-agent",
+                            "hdfsformat",
+                            "zk-headless",
+                            "zk-config",
+                            "worker",
+                            "dlws-grafana",
+                            "detectron",
+                            "nginx",
+                            "FragmentGPUJob",
+                            "freeflowrouter",
+                            "yarnrm1",
+                            "yarnrm2",
+                            "hdfsdatanode",
+                            "google-cadvisor",
+                            "P40",
+                            "cloud-collectd-node-agent"
+                            ],
+                            "unschedulable": false
+                            },
+                            {
+                            "InternalIP": "192.168.0.12",
+                            "gpuType": "P40",
+                            "gpu_allocatable": {
+                            "P40": 4
+                            },
+                            "gpu_capacity": {
+                            "P40": 4
+                            },
+                            "gpu_used": {
+                            "P40": 3
+                            },
+                            "labels": {
+                            "FragmentGPUJob": "active",
+                            "all": "active",
+                            "beta.kubernetes.io/arch": "amd64",
+                            "beta.kubernetes.io/os": "linux",
+                            "cloud-collectd-node-agent": "active",
+                            "cloud-fluentd-es-config-v0.1.0": "active",
+                            "cloud-fluentd-es-v2.0.2": "active",
+                            "collectd-node-agent": "active",
+                            "datanode": "active",
+                            "default": "active",
+                            "detectron": "active",
+                            "dlws-grafana": "active",
+                            "elasticsearch-logging": "active",
+                            "fluentd-es-config-v0.1.0": "active",
+                            "fluentd-es-v2.0.2": "active",
+                            "freeflowrouter": "active",
+                            "glusterfs": "active",
+                            "google-cadvisor": "active",
+                            "gpuType": "P40",
+                            "hdfs": "active",
+                            "hdfsdatanode": "active",
+                            "hdfsformat": "active",
+                            "hdfsjournal": "active",
+                            "hdfsnn1": "active",
+                            "hdfsnn2": "active",
+                            "hdfsstandby": "active",
+                            "kubernetes.io/hostname": "dltsprod-worker-ljomqh",
+                            "nginx": "active",
+                            "nvidia-device-plugin-daemonset": "active",
+                            "nvidiaheartbeat": "active",
+                            "recogserver": "active",
+                            "sparknode": "active",
+                            "worker": "active",
+                            "yarnnodemanager": "active",
+                            "yarnrm1": "active",
+                            "yarnrm2": "active",
+                            "zk": "active",
+                            "zk-config": "active",
+                            "zk-headless": "active"
+                            },
+                            "name": "dltsprod-worker-ljomqh",
+                            "pods": [
+                            "113cdf0e-1fe6-4374-b5da-3c80cef83ace : anbhu (gpu #:0)",
+                            "33a8d25c-e79a-4d8f-98b1-95f0a1007f76 : v-liuhon (gpu usage:0%)!!!!!! (gpu #:1)",
+                            "7512db3a-b2db-4dfe-b741-cca887024d0d : nazikh (gpu usage:0%)!!!!!! (gpu #:2)",
+                            "97633ec1-8818-463e-8b46-2a029f911f67 : anbhu (gpu #:0)",
+                            "ed42fd0b-7ef8-46bb-a6e7-07471b1cdada-ps0 : t-imschl (gpu #:0)"
+                            ],
+                            "scheduled_service": [
+                            "nvidiaheartbeat",
+                            "cloud-fluentd-es-v2.0.2",
+                            "zk",
+                            "hdfsjournal",
+                            "glusterfs",
+                            "hdfsstandby",
+                            "yarnnodemanager",
+                            "fluentd-es-v2.0.2",
+                            "hdfs",
+                            "nvidia-device-plugin-daemonset",
+                            "cloud-fluentd-es-config-v0.1.0",
+                            "hdfsnn1",
+                            "hdfsnn2",
+                            "datanode",
+                            "recogserver",
+                            "elasticsearch-logging",
+                            "fluentd-es-config-v0.1.0",
+                            "sparknode",
+                            "collectd-node-agent",
+                            "hdfsformat",
+                            "zk-headless",
+                            "zk-config",
+                            "worker",
+                            "dlws-grafana",
+                            "detectron",
+                            "nginx",
+                            "FragmentGPUJob",
+                            "freeflowrouter",
+                            "yarnrm1",
+                            "yarnrm2",
+                            "hdfsdatanode",
+                            "google-cadvisor",
+                            "P40",
+                            "cloud-collectd-node-agent"
+                            ],
+                            "unschedulable": false
+                            }
+                            ],
+                      "quota": "{\"P40\":43}",
+                      "user_status":  [
+                              {
+                              "userGPU": {
+                              "P40": 6
+                              },
+                              "userName": "joelpf"
+                              },
+                              {
+                              "userGPU": {
+                              "P40": 2
+                              },
+                              "userName": "v-liuhon"
+                              },
+                              {
+                              "userGPU": {
+                              "P40": 1
+                              },
+                              "userName": "jukim"
+                              },
+                              {
+                              "userGPU": {
+                              "P40": 1
+                              },
+                              "userName": "lewisliu"
+                              },
+                              {
+                              "userGPU": {
+                              "P40": 2
+                              },
+                              "userName": "nazikh"
+                              },
+                              {
+                              "userGPU": {
+                              "P40": 4
+                              },
+                              "userName": "t-imschl"
+                              },
+                              {
+                              "userGPU": {
+                              "P40": 2
+                              },
+                              "userName": "owmohamm"
+                              },
+                              {
+                              "userGPU": {
+                              "P40": 8
+                              },
+                              "userName": "xuewa"
+                              },
+                              {
+                              "userGPU": {
+                              "P40": 1
+                              },
+                              "userName": "kafilali"
+                              },
+                              {
+                              "userGPU": {
+                              "P40": 1
+                              },
+                              "userName": "t-qiz"
+                              },
+                              {
+                              "userGPU": {
+                              "P40": 2
+                              },
+                              "userName": "nsarangi"
+                              },
+                              {
+                              "userGPU": {
+                              "P40": 1
+                              },
+                              "userName": "qixcheng"
+                              },
+                              {
+                              "userGPU": {
+                              "P40": 1
+                              },
+                              "userName": "t-anyi"
+                              },
+                              {
+                              "userGPU": {
+                              "P40": 1
+                              },
+                              "userName": "euka"
+                              },
+                              {
+                              "userGPU": {
+                              "P40": 1
+                              },
+                              "userName": "lexion"
+                              },
+                              {
+                              "userGPU": {
+                              "P40": 1
+                              },
+                              "userName": "zeh"
+                              }
+                      ],
+                      "vcName": "platform"
+                    }
         400:
           description: Bad Request
           content:
