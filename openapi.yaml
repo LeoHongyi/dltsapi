@@ -124,7 +124,7 @@ paths:
           required: true
           schema:
             type: string
-      summary: This API is down
+      summary: This API is deprecated
       description: Currently we are using /JobDetail to retrieve job logs.
       deprecated: true
       responses:
@@ -5885,14 +5885,16 @@ paths:
         - Upstream Proxy
       parameters:
         - $ref: '#/components/parameters/cluster'
-        - $ref: '#/components/parameters/email'
-        - $ref: '#/components/parameters/key'
-        - $ref: '#/components/parameters/team'
         - in: query
           name: vcName
           description: VC name
+          required: true
           schema:
             type: string
+        - $ref: '#/components/parameters/email'
+        - $ref: '#/components/parameters/key'
+        - $ref: '#/components/parameters/team'
+
       responses:
         200:
           description: OK
